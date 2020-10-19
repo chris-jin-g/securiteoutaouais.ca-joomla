@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<specific>
+	<version>4.0</version> 
+	<config>
+		<fields>
+            <fieldset name="s50" label="TPL_FIELD_TS_LABEL">
+                <field name="s51spacer_notice" label="&lt;span style=&quot;display:block;&quot;&gt;Make sure to hover your mouse over each title in this column for a full description of what each field does.&lt;/span&gt;" type="spacer" />
+                
+				<field name="xml_s5_highlightcolor1" type="text:6:6" default="1EA0FB" label="TPL_HIGHLIGHTCOLOR1_LABEL" description="TPL_HIGHLIGHTCOLOR1_DESC" />
+				
+				<field name="xml_s5_highlightcolor2" type="text:6:6" default="EBAC11" label="TPL_HIGHLIGHTCOLOR2_LABEL" description="TPL_HIGHLIGHTCOLOR2_DESC" />
+				
+				<field name="xml_s5_fonts_highlight1" type="select:list" default="Open Sans" label="TPL_FONTS_HIGHLIGHT1_LABEL" description="TPL_FONTS_HIGHLIGHT1_DESC"></field>
+				
+				<field name="xml_s5_fonts_highlight1_style" type="text" default="400,300italic,300,400italic,600,600italic,700,700italic,800,800italic" label="TPL_FIELD_FONTSTYLE_HIGHLIGHT1_LABEL" description="TPL_FIELD_FONTSTYLE_HIGHLIGHT1_DESC" />
+				
+				<field name="xml_s5_uppercase" type="select:list" default="yes" label="TPL_UPPERCASE_LABEL" description="TPL_UPPERCASE_DESC">
+					<option value="yes">TPL_YES</option>
+					<option value="no">TPL_NO</option>
+				</field>
+				
+				<field name="xml_s5_full_width_flex_menu_template_specific" type="select:list" default="yes" label="TPL_FULLWIDTH" description="TPL_FULLWIDTH_DESC">
+					<option value="yes">TPL_YES</option>
+					<option value="no">TPL_NO</option>
+				</field>	
+				
+				<field name="xml_s5_full_width_flex_menu_res" type="text" default="1200" label="TPL_FULLWIDTHRES_LABEL" description="TPL_FULLWIDTHRES_DESC" />	
+				
+				<field name="xml_s5_hide_top_bar" type="select:list" default="yes" label="TPL_HIDE_TOP_BAR_LABEL" description="TPL_HIDE_TOP_BAR_DESC">
+					<option value="yes">TPL_YES</option>
+					<option value="no">TPL_NO</option>
+				</field>
+				
+				<field name="xml_s5_hide_subarrows" type="select:list" default="yes" label="TPL_HIDE_SUBARROWS_LABEL" description="TPL_HIDE_SUBARROWS_DESC">
+					<option value="yes">TPL_YES</option>
+					<option value="no">TPL_NO</option>
+				</field>
+				
+            </fieldset>
+		</fields>
+	</config>	
+</specific>

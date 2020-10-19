@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="administrator/components/com_timeworked/models/fields"
+	          addrulepath="/administrator/components/com_timeworked/models/rules">
+		<field name="id"
+		       type="hidden"
+		       default="0"
+		       readonly="true"
+				/>
+		<field name="user_id"
+		       type="UserEnabled"
+               label="COM_TIMEWORKED_USER"
+		        />
+		<field name="daterange"
+		       type="daterange"
+		       readonly="readonly"
+		       id="daterange"
+		       required="true"
+		       label="COM_TIMEWORKED_DATERANGE"
+		       description=""
+				/>
+		<field name="work_days"
+		       type="text"
+		       required="true"
+		       label="COM_TIMEWORKED_NUMBER_OF_WORKIG_DAYS"
+		       description="COM_TIMEWORKED_WORK_DAYS_DESC"
+		       validate="number"
+				/>
+		<field name="leave_type"
+		       type="leavetype"
+		       label="COM_TIMEWORKED_LEAVE_TYPE"
+		       description=""
+		       required="true"
+				/>
+		<field name="user_commentary"
+		       type="textarea"
+		       label="COM_TIMEWORKED_COMMENTARY"
+		       description="COM_TIMEWORKED_COMMENTARY_DESC"
+		       default=""
+		       required="false"
+		       maxlength="1000"
+				/>
+		<field name="start_date"
+		       type="hidden"
+				/>
+		<field name="end_date"
+		       type="hidden"
+				/>
+        <field name="status"
+		       type="leavestatus"
+		       label="COM_TIMEWORKED_STATUS"
+		       description=""
+		       required="true"
+				/>
+	</fieldset>
+</form>

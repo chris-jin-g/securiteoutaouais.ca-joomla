@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id"
+		       type="hidden"
+		       default="0"
+		       label="JGLOBAL_FIELD_ID_LABEL"
+				/>
+		<field name="name"
+		       type="text"
+		       label="COM_TIMEWORKED_NAME"
+		       description="COM_TIMEWORKED_NAME_DESC"
+		       required="true"
+		       maxlength="255"
+				/>
+	</fieldset>
+</form>

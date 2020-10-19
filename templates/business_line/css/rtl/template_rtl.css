@@ -1,0 +1,176 @@
+#cboxContent, #s5_body_padding, .slideInfoZone .left {
+direction:rtl;
+text-align:right;
+}
+
+#s5_center_area1 {
+direction:ltr;
+}
+
+#s5_pos_custom_1 {
+text-align:left;
+direction:ltr;
+}
+
+.jdGallery a.readon {
+float: right;
+margin-right:0px;
+margin-left:16px;
+}
+
+.address_info, .address_info i {
+margin-right: 0px;
+margin-left:8px;
+}
+
+.progress_bar {
+padding-right:0px;
+padding-left:5%;
+}
+
+.accordion_image {
+float:left;
+}
+
+.testimonial_details img {
+float:right;
+margin-right:0px;
+margin-left:20px;
+}
+
+.employee_image {
+float: right;
+margin-right: 0px;
+margin-left:34px;
+}
+
+#s5_pos_custom_5 {
+float:right;
+}
+
+#s5_pos_custom_6 {
+float:left;
+}
+
+li.pagenav-next {
+float:left;
+}
+
+li.pagenav-prev {
+float:right;
+}
+
+ul.actions {
+float:left;
+}
+
+.pull-right {
+float:left;
+}
+
+#loading_img {
+visibility:hidden;
+}
+
+#s5_ls_close {
+right:auto !important;
+left:4px !important;
+}
+
+.article-info dt, .article-info dd {
+margin-right:0px;
+margin-left:14px;
+}
+
+#s5_logo_wrap {
+float:right;
+margin-right:32px;
+margin-left:0px;
+}
+
+#s5_search_wrap {
+left:0;
+right:auto;
+}
+
+#s5_loginreg {
+padding-right: 0px;
+padding-left:40px;
+float:left;
+}
+
+#description {
+text-align:right !important;
+}
+
+.button {
+margin-right:0px;
+margin-left:8px;
+}
+
+#s5_responsive_menu_button {
+float:right;
+margin-left:0px;
+margin-right:38px;
+}
+
+.learn_about_us_text_wrap i {
+margin-left:0px;
+margin-right:8px;
+}
+
+p.readmore a, p.readmore {
+margin-right:0px;
+margin-left:15px;
+}
+
+.s5_tab_show_slide_button_active, .s5_tab_show_slide_button_inactive {
+float:right !important;
+margin-right:0px !important;
+margin-left:4px !important;
+}
+
+/* Accordion
+----------------------------------------------------------- */
+
+.s5_am_toggler {
+text-indent:22px;
+}
+
+div.s5_accordion_menu_element li a, .s5_am_inner_li .separator span {
+background-position:center right !important;
+padding-left:0px;
+padding-right:8px;
+}
+
+#s5_accordion_menu h3.s5_am_parent span.s5_accordion_menu_left, h3 span.s5_accordion_menu_left {
+padding-right: 46px !important;
+}
+
+
+.s5_am_not_parent .s5_accordion_menu_left {
+padding-right:20px !important;
+}
+
+
+/* Flex Menu
+----------------------------------------------------------- */
+
+
+#s5_nav, #subMenusContainer {
+direction:rtl;
+}
+
+#s5_nav li {
+float:right;
+}
+
+#subMenusContainer a, #s5_nav li li a {
+text-align:right;
+}
+
+#s5_nav li.mainParentBtn .s5_level1_span2 a {
+background-position:center left !important;
+padding-right:0px;
+padding-left:20px;
+}

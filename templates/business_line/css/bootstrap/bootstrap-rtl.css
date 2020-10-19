@@ -1,0 +1,305 @@
+/* Bootstrap RTL */
+/* Pull right or left */
+.pull-right {
+  float: left;
+}
+.pull-left {
+  float: right;
+}
+/* Tables */
+.table th,
+.table td {
+  text-align: right;
+}
+/* Navbar */
+.navbar .brand {
+  float: right;
+  padding: 8px 20px 12px;
+  margin-right: -20px;
+  margin-left: 0;
+}
+.navbar .nav,
+.navbar .nav > li {
+  float: left;
+}
+.navbar .nav.pull-right {
+  margin-right: 10px;
+  margin-left: 0px;
+}
+.pull-right > .dropdown-menu {
+  left: 0;
+  right: auto;
+}
+/* Forms */
+.form-horizontal .control-label {
+  float: right;
+  width: 140px;
+  padding-top: 10px;
+  text-align: left;
+}
+.form-horizontal .controls {
+  *display: inline-block;
+  *padding-right: 20px;
+  margin-right: 160px;
+  *margin-right: 0;
+  margin-left: 0;
+  text-align: right;
+  margin-top: 6px;
+}
+.form-horizontal .controls:first-child {
+  *padding-right: 160px;
+}
+.form-vertical .control-label {
+  float: none;
+  padding-right: 0;
+  padding-top: 0;
+  text-align: right;
+  width: auto;
+}
+/* Nav */
+/* Tabs */
+.nav-tabs > li,
+.nav-pills > li {
+  float: right;
+}
+.btn-group > .btn:first-child {
+  margin-right: 0;
+}
+
+/* Forms */
+/* Input Prepend and Append */
+.input-prepend .add-on {
+  float: right;
+}
+.input-append .add-on {
+  float: left;
+}
+.input-prepend .add-on,
+.input-prepend .btn {
+  margin-left: -1px;
+  margin-right: 0;
+}
+.input-prepend .add-on:first-child,
+.input-prepend .btn:first-child {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.input-append input,
+.input-append select,
+.input-append .uneditable-input {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.input-append .add-on:last-child,
+.input-append .btn:last-child {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+.input-prepend.input-append input,
+.input-prepend.input-append select,
+.input-prepend.input-append .uneditable-input {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.input-prepend.input-append .add-on:first-child,
+.input-prepend.input-append .btn:first-child {
+  margin-left: -1px;
+  margin-right: 0px;
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  float: right;
+}
+.input-prepend.input-append .add-on:last-child,
+.input-prepend.input-append .btn:last-child {
+  margin-right: -1px;
+  margin-left: 0px;
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+.input-prepend input,
+.input-prepend select,
+.input-prepend .uneditable-input {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+/* start myrtl */
+body {
+  direction: auto;
+}
+.pager .next a {
+  float: left;
+}
+.pager .previous a {
+  float: right;
+}
+.icon-arrow-right {
+  background-position: -241px -94px;
+  float: left;
+  padding-right: 3px;
+}
+.icon-arrow-left {
+  background-position: -264px -95px;
+}
+.icon-refresh {
+  background-position: -240px -23px;
+}
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  float: right;
+  margin-right: 2px;
+  margin-left: 5px;
+}
+.list-striped,
+.row-striped {
+  list-style: none;
+  line-height: 18px;
+  text-align: right;
+}
+.btn-group + .btn-group {
+  margin-right: 5px;
+  margin-left: 0px;
+}
+.tabs-left > .nav-tabs {
+  float: right;
+  margin-left: 19px;
+  margin-right: 0px;
+}
+.tabs-left > .nav-tabs > li > a {
+  margin-left: -1px;
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+  margin-right: 0px;
+}
+.controls > .radio:first-child,
+.controls > .checkbox:first-child {
+  padding-top: 0px;
+}
+.btn-toolbar {
+  margin-top: 14px;
+  margin-bottom: 3px;
+}
+.navbar .nav > li {
+  float: right;
+}
+.icon-folder-2 {
+  line-height: 25px;
+  padding-left: 5px;
+}
+.container-logo {
+  padding-top: 6px;
+}
+.modal-header .close {
+  float: left;
+}
+.pagination ul {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  margin-right: 0;
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.pagination-centered {
+  text-align: center;
+}
+.pagination-right {
+  text-align: right;
+}
+.icon-first:before {
+  content: "\e000";
+}
+.icon-previous:before {
+  content: "\7d";
+}
+.icon-last:before {
+  content: "\7b";
+}
+.icon-next:before {
+  content: "\7c";
+}
+.dl-horizontal dt {
+  float: right;
+}
+.profile > ul {
+  margin: 9px 25px 0 0;
+}
+/* end myrtl */
+.dropdown-submenu > a:after {
+	float: left;
+	border-width: 5px 5px 5px 0;
+	margin-left: -10px;
+}
+
+[class*="span"] {
+  float: right;
+}
+#s5_nav [class*="span"], #subMenusContainer [class*="span"], #s5_va_accordion [class*="span"] {
+  float: none;
+}
+.contact .dl-horizontal dd {
+margin-left:0px;
+margin-right:40px;
+}
+
+.contact .control-label {
+float:none;
+width:auto;
+text-align:right;
+}
+
+.contact .controls {
+margin-left:auto;
+margin-right:auto;
+}
+
+.contact input, .contact textarea {
+width:80%;
+}
+
+.userdata ul {
+margin-right:0px;
+}
+
+.dl-horizontal dt {
+float:right;
+text-align:left;
+}
+
+.dl-horizontal dd {
+margin-right:180px;
+margin-left:0px;
+}
+
+#modlgn-remember {
+float:right;
+margin-right:0px;
+margin-left:3px;
+}
+
+.row-fluid .thumbnails {
+margin-right:0px;
+}
+
+.form-search .input-append .search-query {
+-webkit-border-radius: 0px 14px 14px 0px;
+-moz-border-radius: 0px 14px 14px 0px;
+border-radius: 0px 14px 14px 0px;
+}
+
+.form-search .input-prepend .search-query {
+-webkit-border-radius: 14px 0 0 14px;
+-moz-border-radius: 14px 0 0 14px;
+border-radius: 14px 0 0 14px;
+}

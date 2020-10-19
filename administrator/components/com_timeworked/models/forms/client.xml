@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id"
+		       type="hidden"
+		       default="0"
+				/>
+		<field name="company"
+		       type="text"
+		       label="COM_TIMEWORKED_COMPANY"
+		       description="COM_TIMEWORKED_COMPANY_DESC"
+		       required="true"
+		       maxlength="255"
+				/>
+		<field name="short_name"
+		       type="text"
+		       label="COM_TIMEWORKED_COMPANY_SHORT_NAME"
+		       description="COM_TIMEWORKED_COMPANY_SHORT_NAME_DESC"
+		       maxlength="255"
+				/>
+		<field
+				name="published"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="JENABLED"
+				description=""
+				default="1"
+				filter="integer"
+				>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="contact_person"
+		       type="text"
+		       label="COM_TIMEWORKED_CONTACT"
+		       description="COM_TIMEWORKED_CONTACT_DESC"
+		       size="45"
+		       maxlength="255"
+				/>
+		<field name="email"
+		       type="email"
+		       label="COM_TIMEWORKED_EMAIL"
+		       description="COM_TIMEWORKED_EMAIL_DESC"
+		       size="45"
+		       maxlength="255"
+				/>
+		<field name="skype"
+		       type="text"
+		       label="COM_TIMEWORKED_SKYPE"
+		       description="COM_TIMEWORKED_SKYPE_DESC"
+		       size="45"
+		       maxlength="255"
+				/>
+		<field name="phone"
+		       type="text"
+		       label="COM_TIMEWORKED_PHONE"
+		       description="COM_TIMEWORKED_PHONE_DESC"
+		       size="45"
+		       maxlength="45"
+				/>
+		<field name="address"
+		       type="textarea"
+		       label="COM_TIMEWORKED_ADDRESS"
+		       description="COM_TIMEWORKED_ADDRESS_DESC"
+				/>
+		<field name="notes"
+		       type="textarea"
+		       label="COM_TIMEWORKED_NOTES"
+		       description="COM_TIMEWORKED_NOTES_DESC"
+				/>
+		<field
+				name="set_background_color"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_TIMEWORKED_SET_BACKGROUND_COLOR"
+				description="COM_TIMEWORKED_SET_BACKGROUND_COLOR_DESC"
+				default="1"
+				filter="integer"
+				>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="color"
+		       type="color"
+		       label=""
+		       description=""
+		       size="6"
+		       maxlength="7"
+		       default="#ffffff"
+				/>
+		<field name="issue_tracker"
+		       type="url"
+		       label="COM_TIMEWORKED_BUGTRACKER_URL_CLIENT_LABEL"
+		       description="COM_TIMEWORKED_BUGTRACKER_URL_CLIENT_DESC"
+		       maxlength="255"
+		       size="45"
+				/>
+	</fieldset>
+</form>

@@ -1,0 +1,215 @@
+/**
+ * @package GiantLeapLab.TimeWorked
+ * @subpackage com_timeworked
+ * @version 1.3.2
+ * @date January 18, 2019
+ * @author Giant Leap Lab. http://www.giantleaplab.com
+ * @copyright Copyright (c) 2014-2019 Giant Leap Lab
+ * @license GNU/GPL v3 http://www.gnu.org/licenses/gpl-3.0.html License code: 2QFSEH59TLTKR57KWKN2TJ574BNWOT4H
+ */
+#tw-calendar {
+	max-width   : 358px;
+	width       : 100%;
+	float       : left;
+	padding-top : 5px;
+}
+
+#tw-calendar .clndr .clndr-controls {
+	display       : inline-block;
+	width         : 100%;
+	position      : relative;
+	height        : 19px;
+	margin-bottom : 7px;
+}
+
+#tw-calendar .clndr .clndr-controls .clndr-control-button span {
+	display   : block;
+	color     : #eb9737;
+	font-size : 24px;
+}
+
+#tw-calendar .clndr .clndr-controls .clndr-control-button span:hover {
+	color : #ca6a62;
+}
+
+#tw-calendar .clndr .clndr-controls .clndr-control-button span {
+	float  : left;
+	cursor : pointer;
+}
+
+#tw-calendar .clndr .clndr-controls .rightalign span {
+	float : right;
+}
+
+#tw-calendar .clndr .clndr-controls .title-date {
+	width      : 100%;
+	position   : absolute;
+	text-align : center;
+	font-size  : 18px;
+	color      : #000000;
+	z-index    : 1;
+}
+
+#tw-calendar .clndr .clndr-controls .clndr-control-button {
+	left     : 0;
+	width    : 60px;
+	z-index  : 200;
+	position : absolute;
+}
+
+#tw-calendar .clndr .clndr-controls .clndr-control-button.rightalign {
+	right : 0;
+	left  : auto;
+}
+
+#tw-calendar .clndr .clndr-controls .clndr-previous-button {
+	margin-left : 10px;
+}
+
+#tw-calendar .clndr .clndr-controls .clndr-next-button {
+	margin-right : 10px;
+}
+
+#tw-calendar .clndr .clndr-controls span.clndr-previous-button,
+#tw-calendar .clndr .clndr-controls span.clndr-next-button {
+	font-size  : 22px;
+	margin-top : 1px;
+}
+
+#tw-calendar .clndr .clndr-controls .clndr-control-button .clndr-next-button.inactive, #tw-calendar .clndr .clndr-controls .clndr-control-button .clndr-next-year-button.inactive, #tw-calendar .clndr .clndr-controls .clndr-control-button .clndr-previous-button.inactive, #tw-calendar .clndr .clndr-controls .clndr-control-button .clndr-previous-year-button.inactive {
+	opacity : 0.5;
+}
+
+#tw-calendar .clndr .clndr-controls .clndr-control-button .clndr-next-button.inactive:hover, #tw-calendar .clndr .clndr-controls .clndr-control-button .clndr-next-year-button.inactive:hover, #tw-calendar .clndr .clndr-controls .clndr-control-button .clndr-previous-button.inactive:hover, #tw-calendar .clndr .clndr-controls .clndr-control-button .clndr-previous-year-button.inactive:hover {
+	background : none;
+	cursor     : default;
+}
+
+#tw-calendar .clndr .clndr-today-button {
+	cursor      : pointer;
+	margin      : 10px auto 0;
+	color       : #0088cc;
+	font-size   : 17px;
+	line-height : 17px;
+	text-align  : center;
+}
+
+#tw-calendar .clndr .clndr-today-button:hover, #tw-calendar .clndr .clndr-today-button:hover span {
+	color : #005580;
+}
+
+#tw-calendar .clndr .clndr-today-button i {
+	margin-right : 4px;
+	font-size    : 18px;
+}
+
+#tw-calendar .clndr .clndr-today-button.inactive {
+	opacity : 0.5;
+}
+
+#tw-calendar .clndr .clndr-today-button.inactive:hover {
+	background : none;
+	cursor     : default;
+}
+
+#tw-calendar .clndr .clndr-table {
+	table-layout : fixed;
+	width        : 100%;
+}
+
+#tw-calendar .clndr .clndr-table td {
+	padding : 0;
+}
+
+#tw-calendar .clndr .clndr-table .header-days, #tw-calendar .clndr .clndr-table .header-days:hover td {
+	height     : 25px;
+	font-size  : 17px;
+	background : #3d73b5;
+	color      : #e5ebf2;
+}
+
+#tw-calendar .clndr .clndr-table .header-days .header-day {
+	vertical-align : middle;
+	text-align     : center;
+	border-left    : 1px solid #b7bdc7;
+	border-top     : 1px solid #b7bdc7;
+}
+
+#tw-calendar .clndr .clndr-table .header-days .header-day:last-child {
+	border-right : 1px solid #b7bdc7;
+}
+
+#tw-calendar .clndr .clndr-table .clear {
+	height : 2px;
+	border : none;
+}
+
+#tw-calendar .clndr .clndr-table tr .day {
+	border-left    : 1px solid #b7bdc7;
+	border-top     : 1px solid #b7bdc7;
+	width          : 100%;
+	height         : 49px;
+	color          : #000000;
+	vertical-align : top;
+	background     : #ffffff;
+	cursor         : pointer;
+}
+
+#tw-calendar .clndr .clndr-table tr .day:last-child {
+	border-right : 1px solid #b7bdc7;
+}
+
+#tw-calendar .clndr .clndr-table tr:last-child .day {
+	border-bottom : 1px solid #b7bdc7;
+}
+
+#tw-calendar .clndr .clndr-table tr .day .day-contents {
+	box-sizing   : border-box;
+	font-size    : 16px;
+	text-align   : left;
+	padding-left : 2px;
+	line-height  : 24px;
+	background   : #ffffff;
+}
+
+#tw-calendar .clndr .clndr-table tr .day.adjacent-month .day-contents {
+	color : #c8cbce;
+}
+
+#tw-calendar .clndr .clndr-table tr .day.checked-date .day-contents {
+	background : #83b4f1;
+	color      : #000000;
+}
+
+#tw-calendar .clndr .clndr-table tr .day.checked-date .day-events-count {
+	background : #6aa1e6;
+	color      : #ffffff;
+}
+
+#tw-calendar .clndr .clndr-table tr .day .day-events-count {
+	color         : #2f6dad;
+	line-height   : 23px;
+	text-align    : right;
+	font-size     : 13px;
+	padding-right : 3px;
+	background    : #edeff1;
+	height        : 23px;
+	overflow      : hidden;
+}
+
+#tw-calendar .clndr .clndr-table tr .day > div {
+	margin : 1px;
+}
+
+#tw-calendar .clndr .clndr-table tr .day.today > div {
+	border : 1px solid #f7941d;
+}
+
+#tw-calendar .clndr .clndr-table tr .day.today .day-contents {
+	line-height : 23px;
+}
+
+#tw-calendar .clndr .clndr-table tr .day.today .day-contents {
+	line-height : 22px;
+	height      : 22px;
+}

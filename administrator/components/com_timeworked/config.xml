@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+	<fieldset
+			name="permissions"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			description="JCONFIG_PERMISSIONS_DESC"
+			>
+		<field
+				name="rules"
+				type="rules"
+				label="JCONFIG_PERMISSIONS_LABEL"
+				validate="rules"
+				filter="rules"
+				component="com_timeworked"
+				section="component"/>
+	</fieldset>
+	<fieldset
+			name="view"
+			label="COM_WORRKEDTIME_CONFIG_REPORT_FORM_AND_TABLE_LABEL"
+			description="COM_WORRKEDTIME_CONFIG_REPORT_FORM_AND_TABLE_DESC"
+			>
+		<field
+				name="enabled_ticket_number"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_TIMEWORKED_ENABLED_TICKET_NUMBER_LABEL"
+				description="COM_TIMEWORKED_RENABLED_TICKET_NUMBER_DESC"
+				default="1"
+				filter="integer"
+				>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field
+				name="required_ticket_numbers"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_TIMEWORKED_REQUIRED_TASKID_LABEL"
+				description="COM_TIMEWORKED_REQUIRED_TASKID_DESC"
+				default="0"
+				filter="integer"
+				>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field
+				name="required_performed_work"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_TIMEWORKED_REQUIRED_PERFORMED_WORK_LABEL"
+				description="COM_TIMEWORKED_REQUIRED_PERFORMED_WORK_DESC"
+				default="1"
+				filter="integer"
+				>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field
+				name="enabled_tasks_list"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_TIMEWORKED_ENABLED_TASKS_LIST_LABEL"
+				description="COM_TIMEWORKED_ENABLED_TASKS_LIST_DESC"
+				default="0"
+				filter="integer"
+				>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field
+				name="bugtracker_url"
+				type="URL"
+				validate="URL"
+				label="COM_TIMEWORKED_BUGTRACKER_URL_LABEL"
+				description="COM_TIMEWORKED_BUGTRACKER_URL_DESC"
+				/>
+		<field
+				name="clear_new_line_excel"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_TIMEWORKED_CLEAR_NEW_LINE_EXCEL_LABEL"
+				description="COM_TIMEWORKED_CLEAR_NEW_LINE_EXCEL_DESC"
+				default="1"
+				filter="integer"
+				>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field
+				name="excel_new_line_separator"
+				type="list"
+				label="COM_TIMEWORKED_EXCEL_NEW_LINE_SEPARATOR_LABEL"
+				description="COM_TIMEWORKED_EXCEL_NEW_LINE_SEPARATOR_DESC"
+				default="space"
+				filter="string"
+				>
+			<option value="space">Space</option>
+			<option value=".">.</option>
+			<option value=",">,</option>
+			<option value=";">;</option>
+			<option value="/">/</option>
+			<option value="|">|</option>
+		</field>
+		<field
+				name="not_billable_hours"
+				type="list"
+				label="COM_TIMEWORKED_NOT_BILLABLE_HOURS_LABEL"
+				description="COM_TIMEWORKED_NOT_BILLABLE_HOURS_DESC"
+				default="0"
+				filter="integer"
+				>
+			<option value="0">COM_TIMEWORKED_EXPORT_NOT_BILLABLE_HOURS</option>
+			<option value="1">COM_TIMEWORKED_CONFIRM_NOT_BILLABLE_HOURS</option>
+			<option value="2">COM_TIMEWORKED_DONT_EXPORT_NOT_BILLABLE_HOURS</option>
+		</field>
+	</fieldset>
+	<fieldset
+            name="default_groups"
+            label="COM_WORRKEDTIME_CONFIG_DEFAULT_GROUPS_LABEL"
+            description="COM_WORRKEDTIME_CONFIG_DEFAULT_GROUPS_DESC"
+        >
+		<field
+                    name="default_employee_group"
+                    type="usergroup"
+                    label="COM_TIMEWORKED_DEFAULT_EMPLOYEE_GROUP_LABEL"
+                    description="COM_TIMEWORKED_DEFAULT_EMPLOYEE_GROUP_DESC"
+                />
+		<field
+                    name="default_manager_group"
+                    type="usergroup"
+                    label="COM_TIMEWORKED_DEFAULT_MANAGER_GROUP_LABEL"
+                    description="COM_TIMEWORKED_DEFAULT_MANAGER_GROUP_DESC"
+                />
+	</fieldset>
+	<fieldset
+			name="reports_notifications"
+			label="COM_WORRKEDTIME_CONFIG_MISSING_REPORTS_NOTIFICATIONS_LABEL"
+			description="COM_WORRKEDTIME_CONFIG_MISSING_REPORTS_NOTIFICATIONS_DESC"
+			addfieldpath="administrator/components/com_timeworked/models/fields"
+			addrulepath="administrator/components/com_timeworked/models/rules"
+			>
+		<field
+				name="missing_reports_automated_notifications"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_TIMEWORKED_MISSING_REPORTS_AUTOMATED_NOTIFICATIONS_LABEL"
+				description="COM_TIMEWORKED_MISSING_REPORTS_AUTOMATED_NOTIFICATIONS_DESC"
+				default="0"
+				filter="integer"
+				>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field
+				name="number_of_required_hours"
+				type="integer"
+				label="COM_TIMEWORKED_NUMBER_OF_REQUIRED_HOURS_LABEL"
+				description="COM_TIMEWORKED_NUMBER_OF_REQUIRED_HOURS_DESC"
+				default="0"
+				filter="integer"
+				first="1"
+				last="12"
+				step="1"
+				/>
+		<field
+				name="notification_days_count"
+				type="text"
+				label="COM_TIMEWORKED_NOTIFICATION_DAYS_COUNT_LABEL"
+				description="COM_TIMEWORKED_NOTIFICATION_DAYS_COUNT_DESC"
+				size="3"
+				validate="number"
+                default="5"
+				/>
+		<field
+				name="check_todays_hours"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_TIMEWORKED_CHECK_TODAYS_HOURS_LABEL"
+				description="COM_TIMEWORKED_CHECK_TODAYS_HOURS_DESC"
+				filter="integer"
+				default="1"
+				>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field
+				name="weekends"
+				type="list"
+				class="btn-group"
+				label="COM_TIMEWORKED_WEEKENDS_LABEL"
+				description="COM_TIMEWORKED_WEEKENDS_DESC"
+				multiple="true"
+				>
+			<option value="1">MONDAY</option>
+			<option value="2">TUESDAY</option>
+			<option value="3">WEDNESDAY</option>
+			<option value="4">THURSDAY</option>
+			<option value="5">FRIDAY</option>
+			<option value="6">SATURDAY</option>
+			<option value="7">SUNDAY</option>
+		</field>
+		<field
+				name="cron_url"
+				type="cronurl"
+				label="COM_TIMEWORKED_CRON_URL_LABEL"
+				description="COM_TIMEWORKED_CRON_URL_DESC"
+				readonly="true"
+				/>
+		<field
+				name="cron_path"
+				type="cronpath"
+				label="COM_TIMEWORKED_CRON_PATH_LABEL"
+				description="COM_TIMEWORKED_CRON_PATH_DESC"
+				readonly="true"
+				/>
+	</fieldset>
+	<fieldset
+			name="api_params"
+			label="COM_WORRKEDTIME_CONFIG_MISSING_REPORTS_API_PARAMS"
+			description="COM_WORRKEDTIME_CONFIG_MISSING_REPORTS_API_PARAMS_DESC"
+			addfieldpath="administrator/components/com_timeworked/models/fields"
+			addrulepath="administrator/components/com_timeworked/models/rules"
+	>
+		<field
+				name="api_enabled"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_TIMEWORKED_API_ENABLE"
+				description="COM_TIMEWORKED_API_ENABLE_DESC"
+				default="0"
+				filter="integer"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field
+				name="plugin_reports_check_time"
+				type="time"
+				label="COM_TIMEWORKED_CHECK_TIME_LABEL"
+				description="COM_TIMEWORKED_CHECK_TIME_DESC"
+				validate="time"
+		/>
+	</fieldset>
+</config>

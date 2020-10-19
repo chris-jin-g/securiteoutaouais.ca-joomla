@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vertex>
+	<details>
+		<title>Vertex Framework</title>
+		<author>Shape5.com</author>
+		<copyright>Shape5</copyright>
+		<authorEmail>contact@shape5.com</authorEmail>
+		<authorUrl>http://www.shape5.com</authorUrl>
+		<frameworkVersion>4.2.5</frameworkVersion>
+	</details>
+	<admin>
+		<fieldset name="s51" label="TPL_FIELD_LFA_LABEL" icon="picture1" hom="1,0,0,0" iscustom="true" csubs="1,0,0,0">
+			<field page="Layout" type="fluidwidth" css="dark tms mtmp" intro="This area controls the entire width of your site and background to the body of the site.  You can set to fluid or fixed and also set a max pixel width so that once your screen reaches a certain width it won't stretch any further. Click the icon to the right for the lightbox to show all the main body background options. "  >
+			<field page="Layout" name="xml_s5_fixed_fluid" css="left" type="select" default="%" label="TPL_FIELD_FIXEDFLUID_LABEL" description="TPL_FIELD_FIXEDFLUID_DESC" onload="callback" callback="function(v){va.ffadjuster(this)}">
+				<option value="px">TPL_FIELD_FIXEDFLUID_O1</option>
+				<option value="%">TPL_FIELD_FIXEDFLUID_O2</option>
+			</field>
+			<field page="Layout" name="xml_s5_body_width" css="left" type="text" default="96" label="TPL_FIELD_BODYWIDTH_LABEL" description="TPL_FIELD_BODYWIDTH_DESC" callback="function(v){}" />
+			<field page="Layout" name="xml_s5_max_body_width" css="left" type="text" default="" label="TPL_FIELD_MAXBODYWIDTH_LABEL" description="TPL_FIELD_MAXBODYWIDTH_DESC" callback="VERTEX.onPage" />
+			<field page="Layout" type="tool" title="Edit background color" icon="picture" css="tool right last" callback="function(){this.popup.open()}">
+			<field name="xml_s5_backgrounds_notice1" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE1" />
+			<field name="xml_s5_body_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_body_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_body_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_body_background_image_repeat" type="select" list="image_repeat" default="repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_body_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_body_background_image_size" type="select" list="image_size" default="none" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_body_background_image_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_body_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			</field>
+			</field>
+			<field page="Layout" name="xml_s5_drop_down_manual_widths" type="ranger" css="mw bgcolor7" dsort="true" default="automatic" label="TPL_FIELD_DROPDOWNMODULES_LABEL" description="TPL_FIELD_ROWMODCALC_DESC" />
+			<field page="Layout" type="fixed" title="Edit Drop Down" css="center-tab" icon="appndcog" callback="function(){this.popup.open()}">
+			<field name="dropdown_instructions" type="spacer" label="TPL_FIELD_DD_DESC" />
+			<field name="xml_s5_drop_down_overlay" type="select" default="right" label="TPL_FIELD_DDS_OVERLAY_LABEL" description="TPL_FIELD_DDS_OVERLAY_DESC">
+				<option value="overlay">TPL_FIELD_DDS_OVERLAY1</option>
+				<option value="push_down">TPL_FIELD_DDS_OVERLAY2</option>
+			</field>
+			<field name="xml_s5_drop_down_width" type="select" default="right" label="TPL_FIELD_DDS_WIDTH_LABEL" description="TPL_FIELD_DDS_WIDHT_DESC">
+				<option value="full">TPL_FIELD_DDS_WIDTH1</option>
+				<option value="body">TPL_FIELD_DDS_WIDTH2</option>
+			</field>
+			<field name="xml_s5_drop_down_button_open_text" type="text" default="Open Panel" label="TPL_FIELD_DDS_BUTTOPEN" description="TPL_FIELD_DDS_BUTTOPEN_DESC" />
+			<field name="xml_s5_drop_down_button_close_text" type="text" default="Close Panel" label="TPL_FIELD_DDS_BUTTCLOSE" description="TPL_FIELD_DDS_BUTTCLOSE_DESC" />
+			<field name="xml_s5_drop_down_button_width" type="text" default="124" label="TPL_FIELD_DDS_BUTTWIDTH" description="TPL_FIELD_DDS_BUTTWIDTH_DESC" />
+			<field name="xml_s5_drop_down_button_height" type="text" default="26" label="TPL_FIELD_DDS_BUTTHEIGHT" description="TPL_FIELD_DDS_BUTTHEIGHT_DESC" />
+			<field name="xml_s5_drop_down_button_text_color" type="text:6:6" default="1E1E1E" size="6" label="TPL_FIELD_DDS_BUTTTXTCOLOR" description="TPL_FIELD_DDS_BUTTTXTCOLOR_DESC" />
+			<field name="xml_s5_drop_down_button_text_hover_color" type="text:6:6" default="666666" size="6" label="TPL_FIELD_DDS_BUTTHVRCOLOR" description="TPL_FIELD_DDS_BUTTHVRCOLOR_DESC" />
+			<field name="xml_s5_drop_down_button_text_size" type="text" default="9" label="TPL_FIELD_DDS_BUTTTXTSIZE" description="TPL_FIELD_DDS_BUTTTXTSIZE_DESC" />
+			<field name="xml_s5_drop_down_button_text_weight" type="select" default="bold" label="TPL_FIELD_DDS_BUTTTXTWGHT" description="TPL_FIELD_DDS_BUTTTXTWGHT_DESC">
+				<option value="bold">TPL_FIELD_DDS_BUTTTXTWGHTB</option>
+				<option value="normal">TPL_FIELD_DDS_BUTTTXTWGHTN</option>
+			</field>
+			<field name="xml_s5_drop_down_button_gradient_start" type="text:6:6" default="FFFFFF" size="6" label="TPL_FIELD_DDS_BUTTGRADST" description="TPL_FIELD_DDS_BUTTGRADST_DESC" />
+			<field name="xml_s5_drop_down_button_gradient_stop" type="text:6:6" default="E5E5E5" size="6" label="TPL_FIELD_DDS_BUTTGRADED" description="TPL_FIELD_DDS_BUTTGRADED_DESC" />
+			<field name="xml_s5_drop_down_button_border_size" type="text" default="1" label="TPL_FIELD_DDS_BUTTBORDERSZ" description="TPL_FIELD_DDS_BUTTBORDERSZ_DESC" />
+			<field name="xml_s5_drop_down_button_border_color" type="text:6:6" default="999999" size="6" label="TPL_FIELD_DDS_BUTTBORDERCOLOR" description="TPL_FIELD_DDS_BUTTBORDERCOLOR_DESC" />
+			<field name="xml_s5_drop_down_button_radius_size" type="text" default="16" label="TPL_FIELD_DDS_BUTTBORDERRR" description="TPL_FIELD_DDS_BUTTBORDERRR_DESC" />
+			<field name="xml_s5_drop_down_button_shadow" type="radio" vars="show:hide|Enable:Disable" default="show" label="TPL_FIELD_DDS_BUTTSHADOW" description="TPL_FIELD_DDS_BUTTSHADOW_DESC" />
+			<field name="xml_s5_drop_down_button_shadow_size" type="text" default="2" label="TPL_FIELD_DDS_BUTTSHADOWSZE" description="TPL_FIELD_DDS_BUTTSHADOWSZE_DESC" />
+			<field name="xml_s5_drop_down_button_shadow_opacity" type="text" default="0.2" label="TPL_FIELD_DDS_BUTTSHADOWOPACITY" description="TPL_FIELD_DDS_BUTTSHADOWOPACITY_DESC" />
+			<field name="xml_s5_drop_down_button_position" type="select" default="center" label="TPL_FIELD_DDS_BUTTPOSITION" description="TPL_FIELD_DDS_BUTTPOSITION_DESC">
+				<option value="left">TPL_FIELD_DDS_BUTTPOSITIONL</option>
+				<option value="center">TPL_FIELD_DDS_BUTTPOSITIONC</option>
+				<option value="right">TPL_FIELD_DDS_BUTTPOSITIONR</option>
+			</field>
+			<field name="xml_s5_drop_down_background" type="text:6:6" default="FFFFFF" size="6" label="TPL_FIELD_DDS_BUTTDROPDOWNBC" description="TPL_FIELD_DDS_BUTTDROPDOWNBC_DESC" />
+			<field name="xml_s5_drop_down_background_opacity" type="text" default="0.95" label="TPL_FIELD_DDS_BUTTDROPDOWNOC" description="TPL_FIELD_DDS_BUTTDROPDOWNOC_DESC" />
+			<field name="xml_s5_drop_down_border_size" type="text" default="2" label="TPL_FIELD_DDS_BUTTDROPDOWNBS" description="TPL_FIELD_DDS_BUTTDROPDOWNBS_DESC" />
+			<field name="xml_s5_drop_down_border_color" type="text:6:6" default="999999" size="6" label="TPL_FIELD_DDS_BUTTDROPDOWNBORDC" description="TPL_FIELD_DDS_BUTTDROPDOWNBORDC_DESC" />
+			<field name="xml_s5_drop_down_shadow" type="radio" vars="show:hide|Enable:Disable" default="show" label="TPL_FIELD_DDS_BUTTDROPDOWNBORDSHAD" description="TPL_FIELD_DDS_BUTTDROPDOWNBORDSHAD_DESC" />
+			<field name="xml_s5_drop_down_shadow_size" type="text" default="2" label="TPL_FIELD_DDS_BUTTDROPDOWNSSIZE" description="TPL_FIELD_DDS_BUTTDROPDOWNSSIZE_DESC" />
+			<field name="xml_s5_drop_down_shadow_opacity" type="text" default="0.2" label="TPL_FIELD_DDS_BUTTDROPDOWNOPACITY" description="TPL_FIELD_DDS_BUTTDROPDOWNOPACITY_DESC" />
+			</field>
+			<field page="Layout" name="xml_s5_top_row1_manual_widths" intro="Each row has the ability to set background options by clicking on the portrait icon. The gear icon is where you can configure custom module widths. If you select the manual option you can then either use the bars to scroll left/right and set the widths or click the icons to the left of the portrait icon to manually type in the width values. &lt;br&gt;&lt;br&gt;For example top_row1 contains 6 positions, if you publish extensions to only top_row1_1 and top_row1_2 the positions will each be set to 50% of the available space or you can choose to set them percentages manually like 60% and 40%." type="ranger" css="mw" dsort="true" default="automatic" label="TPL_FIELD_TOPROW1MODULES_LABEL" description="TPL_FIELD_ROWMODCALC_DESC">
+			<field name="xml_s5_backgrounds_notice3" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE3" />
+			<field name="xml_s5_top_row1_area1_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_top_row1_area1_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_top_row1_area1_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_top_row1_area1_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_top_row1_area1_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_top_row1_area1_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_top_row1_area1_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_top_row1_area1_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_top_row1_area1_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			<field name="xml_s5_backgrounds_notice4" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE4" />
+			<field name="xml_s5_top_row1_area2_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_top_row1_area2_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_top_row1_area2_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_top_row1_area2_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_top_row1_area2_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_top_row1_area2_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_top_row1_area2_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_top_row1_area2_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_top_row1_area2_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			</field>
+			<field page="Layout" name="xml_s5_top_row2_manual_widths" type="ranger" css="mw" dsort="true" cols="20" rows="1" default="automatic" label="TPL_FIELD_TOPROW2MANUALWIDTHS_LABEL" description="TPL_FIELD_MODULEWIDTHS_DESC">
+			<field name="xml_s5_backgrounds_notice5" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE5" />
+			<field name="xml_s5_top_row2_area1_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_top_row2_area1_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_top_row2_area1_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_top_row2_area1_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_top_row2_area1_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_top_row2_area1_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_top_row2_area1_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_top_row2_area1_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_top_row2_area1_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			<field name="xml_s5_backgrounds_notice6" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE6" />
+			<field name="xml_s5_top_row2_area2_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_top_row2_area2_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_top_row2_area2_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_top_row2_area2_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_top_row2_area2_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_top_row2_area2_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_top_row2_area2_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_top_row2_area2_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_top_row2_area2_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			</field>
+			<field page="Layout" name="xml_s5_top_row3_manual_widths" type="ranger" css="mw" dsort="true" default="automatic" label="TPL_FIELD_TOPROW3MODULES_LABEL" description="TPL_FIELD_ROWMODCALC_DESC">
+			<field name="xml_s5_backgrounds_notice7" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE7" />
+			<field name="xml_s5_top_row3_area1_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_top_row3_area1_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_top_row3_area1_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_top_row3_area1_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_top_row3_area1_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_top_row3_area1_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_top_row3_area1_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_top_row3_area1_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_top_row3_area1_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			<field name="xml_s5_backgrounds_notice8" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE8" />
+			<field name="xml_s5_top_row3_area2_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_top_row3_area2_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_top_row3_area2_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_top_row3_area2_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_top_row3_area2_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_top_row3_area2_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_top_row3_area2_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_top_row3_area2_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_top_row3_area2_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			</field>
+			<field page="Layout" name="xml_s5_above_columns_manual_widths" type="ranger" css="mw" dsort="true" default="automatic" label="TPL_FIELD_ABOVECOLUMNSWRAP_LABEL" description="TPL_FIELD_ROWMODCALC_DESC">
+			<field name="xml_s5_backgrounds_notice11" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE11" />
+			<field name="xml_s5_above_columns_wrap1_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_above_columns_wrap1_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_above_columns_wrap1_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_above_columns_wrap1_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_above_columns_wrap1_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_above_columns_wrap1_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_above_columns_wrap1_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_above_columns_wrap1_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_above_columns_wrap1_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			<field name="xml_s5_backgrounds_notice12" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE12" />
+			<field name="xml_s5_above_columns_wrap2_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_above_columns_wrap2_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_above_columns_wrap2_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_above_columns_wrap2_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_above_columns_wrap2_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_above_columns_wrap2_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_above_columns_wrap2_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_above_columns_wrap2_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_above_columns_wrap2_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			</field>
+			<field page="Layout" type="area" css="area dark mw bgcolor1" intro="This area controls the left/right columns, surrounding positions and allows you to hide the article area on any page as desired. This is mainly used on a homepage where you don't want any articles being output.
+			&lt;br&gt;&lt;br&gt;Backgrounds: The 2 portrait icons in the top right will set the backgrounds for the center area and columns wrap areas.
+			&lt;br&gt;&lt;br&gt;Columns: If you choose fluid below be sure to keep the numbers small. The total number (including the content area) cannot exceed 100. An average column should only be about 20 or 30 if set to fluid." callback="function(){removeclass(this.parentNode,'w100 left');addclass(this.parentNode, 'mw alt')}">
+			<field page="Layout" type="title" title="Center Area" css="tool-title left" />
+			<field page="Layout" type="tool" title="Edit background color" icon="picture" css="tool right last" callback="function(){this.popup.open()}">
+			<field name="xml_s5_backgrounds_notice13" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE13" />
+			<field name="xml_s5_columns_wrap_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_columns_wrap_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_columns_wrap_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_columns_wrap_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_columns_wrap_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_columns_wrap_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_columns_wrap_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_columns_wrap_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_columns_wrap_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			<field name="xml_s5_backgrounds_notice14" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE14" />
+			<field name="xml_s5_columns_wrap_inner_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_columns_wrap_inner_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_columns_wrap_inner_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_columns_wrap_inner_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_columns_wrap_inner_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_columns_wrap_inner_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_columns_wrap_inner_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_columns_wrap_inner_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_columns_wrap_inner_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			</field>
+			<field page="Layout" type="tool" title="Edit background color" icon="picture" css="tool right" callback="function(){this.popup.open()}">
+			<field name="xml_s5_backgrounds_notice9" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE9" />
+			<field name="xml_s5_center_area1_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_center_area1_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_center_area1_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_center_area1_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_center_area1_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_center_area1_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_center_area1_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_center_area1_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_center_area1_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			<field name="xml_s5_backgrounds_notice10" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE10" />
+			<field name="xml_s5_center_area2_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_center_area2_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_center_area2_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_center_area2_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_center_area2_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_center_area2_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_center_area2_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_center_area2_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_center_area2_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			</field>
+			<field page="Layout" type="area" css="bgcolor1">
+			<field page="Layout" type="widget" css="section col-group">
+			<field page="Layout" type="custom" css="col col_12_of_12 noinwid bgcolor7">
+			<field page="Layout" name="xml_s5_columns_fixed_fluid" type="select" default="%" label="TPL_FIELD_COLUMNS_FIXEDFLUID_LABEL" description="TPL_FIELD_COLUMNS_FIXEDFLUID_DESC" callback="function(v){va.ffadjuster(this)}">
+				<option value="px">TPL_FIELD_COLUMNS_FIXEDFLUID_O1</option>
+				<option value="%">TPL_FIELD_COLUMNS_FIXEDFLUID_O2</option>
+			</field>
+			</field>
+			</field>
+			<field page="Layout" type="widget" css="section col-group">
+			<field page="Layout" type="expander" css="col col_2_of_12 exmh" title="Left Top" />
+			<field page="Layout" type="custom" css="col col_8_of_12" title="Middle Top">
+			<field page="Layout" name="xml_s5_middle_top_manual_widths" type="ranger" default="automatic" label="TPL_FIELD_MIDDLETOPMODULES_LABEL" description="TPL_FIELD_ROWMODCALC_DESC" />
+			</field>
+			<field page="Layout" type="expander" css="col col_2_of_12 exmh" title="Right Top" />
+			</field>
+			<field page="Layout" type="widget" css="section col-group">
+			<field page="Layout" type="custom" css="col col_1_of_12 exmh" content="Left">
+			<field page="Layout" name="xml_s5_left_width" type="text" default="20" description="TPL_FIELD_LEFTINSETWIDTH_DESC" css="nw" />
+			</field>
+			<field page="Layout" type="custom" css="col col_1_of_12 exmh" content="Left Inset">
+			<field page="Layout" name="xml_s5_left_inset_width" type="text" default="20" description="TPL_FIELD_LEFTINSETWIDTH_DESC" css="nw" />
+			</field>
+			<field page="Layout" type="widget" css="col col_8_of_12">
+			<field page="Layout" type="custom" css="col col_12_of_12 nomar" title="Above Body">
+			<field page="Layout" name="xml_s5_above_body_manual_widths" type="ranger" default="automatic" label="TPL_FIELD_ABOVEBODYMODULES_LABEL" description="TPL_FIELD_ROWMODCALC_DESC" />
+			</field>
+			<field cms="j" page="Layout" type="expander" css="col col_12_of_12 nomar" title="Hide Component Output?">
+				<field cms="j" name="spacer_notice_j" type="spacer" label="TPL_FIELD_SHOWFRONTPAGETITLE_DESC_J" />
+				<field cms="j" name="s5_hide_component_items" type="menuitems" callback="function(){var el=document.getElementById('s5_hide_component_items');if(!el)return;el.className='vi';el.name='vertex[s5_hide_component_items][]';el.removeAttribute('style');var t=this;el.onchange=function(){t.value(VG.getMultiVals(this))};this.className='';var c=VG.current['s5_hide_component_items']||[];if(typeof c=='string')c=c.split(',');this.value(c);VG.setMultiVals(el,c)}" description="TPL_FIELD_SHOWFRONTPAGE_DESC_J" label="TPL_FIELD_SHOWFRONTPAGE_LABEL_J" />
+			</field>
+			<field page="Layout" type="custom" css="col col_12_of_12 nomar" title="Below Body">
+			<field page="Layout" name="xml_s5_below_body_manual_widths" type="ranger" default="automatic" label="TPL_FIELD_BELOWBODYMODULES_LABEL" description="TPL_FIELD_ROWMODCALC_DESC" />
+			</field>
+			</field>
+			<field page="Layout" type="custom" css="col col_1_of_12 exmh" content="Right Inset">
+			<field page="Layout" name="xml_s5_right_inset_width" type="text" default="20" description="TPL_FIELD_RIGHTINSETWIDTH_DESC" css="nw" />
+			</field>
+			<field page="Layout" type="custom" css="col col_1_of_12 exmh" content="Right">
+			<field page="Layout" name="xml_s5_right_width" type="text" default="20" description="TPL_FIELD_RIGHTWIDTH_DESC" css="nw" />
+			</field>
+			</field>
+			<field page="Layout" type="widget" css="section col-group">
+			<field page="Layout" type="expander" css="col col_2_of_12 exmh" title="Left Bottom" />
+			<field page="Layout" type="custom" css="col col_8_of_12" title="Middle Bottom">
+			<field page="Layout" name="xml_s5_middle_bottom_manual_widths" type="ranger" default="automatic" label="TPL_FIELD_MIDDLEBOTTOMMODULES_LABEL" description="TPL_FIELD_ROWMODCALC_DESC" />
+			</field>
+			<field page="Layout" type="expander" css="col col_2_of_12 exmh" title="Right Bottom" />
+			</field>
+			</field>
+			</field>
+			<field page="Layout" name="xml_s5_below_columns_manual_widths" type="ranger" css="mw" dsort="true" default="automatic" label="TPL_FIELD_BELOWCOLUMNS_LABEL" description="TPL_FIELD_ROWMODCALC_DESC">
+			<field name="xml_s5_backgrounds_notice15" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE15" />
+			<field name="xml_s5_below_columns_wrap1_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_below_columns_wrap1_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_below_columns_wrap1_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_below_columns_wrap1_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_below_columns_wrap1_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_below_columns_wrap1_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_below_columns_wrap1_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_below_columns_wrap1_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_below_columns_wrap1_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			<field name="xml_s5_backgrounds_notice16" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE16" />
+			<field name="xml_s5_below_columns_wrap2_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_below_columns_wrap2_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_below_columns_wrap2_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_below_columns_wrap2_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_below_columns_wrap2_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_below_columns_wrap2_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_below_columns_wrap2_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_below_columns_wrap2_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_below_columns_wrap2_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			</field>
+			<field page="Layout" name="xml_s5_bottom_row1_manual_widths" type="ranger" css="mw" dsort="true" default="automatic" label="TPL_FIELD_BOTTOMROW1MODULES_LABEL" description="TPL_FIELD_ROWMODCALC_DESC">
+			<field name="xml_s5_backgrounds_notice17" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE17" />
+			<field name="xml_s5_bottom_row1_area1_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_bottom_row1_area1_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_bottom_row1_area1_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_bottom_row1_area1_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_bottom_row1_area1_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_bottom_row1_area1_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_bottom_row1_area1_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_bottom_row1_area1_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			<field name="xml_s5_backgrounds_notice18" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE18" />
+			<field name="xml_s5_bottom_row1_area2_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_bottom_row1_area2_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_bottom_row1_area2_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_bottom_row1_area2_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_bottom_row1_area2_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_bottom_row1_area2_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_bottom_row1_area2_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_bottom_row1_area2_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_bottom_row1_area2_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			</field>
+			<field page="Layout" name="xml_s5_bottom_row2_manual_widths" type="ranger" css="mw" dsort="true" default="automatic" label="TPL_FIELD_BOTTOMROW2MODULES_LABEL" description="TPL_FIELD_ROWMODCALC_DESC">
+			<field name="xml_s5_backgrounds_notice19" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE19" />
+			<field name="xml_s5_bottom_row2_area1_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_bottom_row2_area1_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_bottom_row2_area1_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_bottom_row2_area1_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_bottom_row2_area1_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_bottom_row2_area1_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_bottom_row2_area1_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_bottom_row2_area1_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_bottom_row2_area1_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			<field name="xml_s5_backgrounds_notice20" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE20" />
+			<field name="xml_s5_bottom_row2_area2_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_bottom_row2_area2_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_bottom_row2_area2_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_bottom_row2_area2_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_bottom_row2_area2_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_bottom_row2_area2_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_bottom_row2_area2_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_bottom_row2_area2_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_bottom_row2_area2_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			</field>
+			<field page="Layout" name="xml_s5_bottom_row3_manual_widths" type="ranger" css="mw" dsort="true" default="automatic" label="TPL_FIELD_BOTTOMROW3MODULES_LABEL" description="TPL_FIELD_ROWMODCALC_DESC">
+			<field name="xml_s5_backgrounds_notice21" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE21" />
+			<field name="xml_s5_bottom_row3_area1_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_bottom_row3_area1_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_bottom_row3_area1_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_bottom_row3_area1_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_bottom_row3_area1_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_bottom_row3_area1_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_bottom_row3_area1_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_bottom_row3_area1_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_bottom_row3_area1_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			<field name="xml_s5_backgrounds_notice22" type="spacer:vertex-plain-spacer" label="TPL_FIELD_BACKGROUNDS_NOTICE22" />
+			<field name="xml_s5_bottom_row3_area2_background" type="select" default="no" label="TPL_FIELD_BACKGROUND_LABEL" description="TPL_FIELD_BACKGROUND_DESC">
+				<option value="yes">TPL_FIELD_BACKGROUND_01</option>
+				<option value="no">TPL_FIELD_BACKGROUND_02</option>
+			</field>
+			<field name="xml_s5_bottom_row3_area2_background_color" type="text:6:6" default="" size="6" label="TPL_FIELD_BACKGROUND_COLOR_LABEL" description="TPL_FIELD_BACKGROUND_COLOR_DESC" />
+			<field name="xml_s5_bottom_row3_area2_background_image" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_DESC" />
+			<field name="xml_s5_bottom_row3_area2_background_image_repeat" type="select" list="image_repeat" default="no-repeat" label="TPL_FIELD_BACKGROUND_IMAGE_REPEAT_LABEL" />
+			<field name="xml_s5_bottom_row3_area2_background_image_position" type="select" list="bg_position" default="top center" label="TPL_FIELD_BACKGROUND_IMAGE_POSITION_LABEL" />
+			<field name="xml_s5_bottom_row3_area2_background_image_size" type="select" list="image_size" default="100% auto" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_LABEL" />
+			<field name="xml_s5_bottom_row3_area2_background_image_size_custom" type="text" default="" label="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_LABEL" description="TPL_FIELD_BACKGROUND_IMAGE_SIZE_CUSTOM_DESC" />
+			<field name="xml_s5_bottom_row3_area2_background_image_attachment" type="select" list="image_attachment" default="scroll" label="TPL_FIELD_BACKGROUND_IMAGE_ATTACHMENT_LABEL" />
+			<field name="xml_s5_bottom_row3_area2_background_parallax" type="select" default="no" label="TPL_FIELD_BACKGROUND_PARALLAX_LABEL" description="TPL_FIELD_BACKGROUND_PARALLAX_DESC">
+				<option value="yes">TPL_FIELD_PARALLAX_01</option>
+				<option value="no">TPL_FIELD_PARALLAX_02</option>
+			</field>
+			</field>
+			<field page="Layout" type="fixed" intro="The fixed tabs will enable once you add text to them. You just click either one and a lightbox will show up with options for you to set, like colors, left/right position on screen and more."  css="fixed-tab tool-title rotate-270" title="Edit Tab 1" icon="appndcog" callback="function(){this.popup.open()}">
+			<field name="spacer_custom" type="spacer" label="TPL_FIELD_FIXEDTAB1LABEL_LABEL" />
+			<field name="xml_s5_lr_tab1_text" type="text" label="TPL_FIELD_FIXEDTAB1TEXT_LABEL" description="TPL_FIELD_FIXEDTAB1TEXT_DESC" />
+			<field name="xml_s5_lr_tab1_vp" type="text" default="30" label="TPL_FIELD_FIXEDTAB1VERTICAL_LABEL" description="TPL_FIELD_FIXEDTAB1VERTICAL_DESC" />
+			<field name="xml_s5_lr_tab1_height" type="text" default="100" label="TPL_FIELD_FIXEDTAB1HEIGHT_LABEL" description="TPL_FIELD_FIXEDTAB1HEIGHT_DESC" />
+			<field name="xml_s5_lr_tab1_class" type="text" label="TPL_FIELD_FIXEDTAB1CLASS_LABEL" description="TPL_FIELD_FIXEDTAB1CLASS_DESC" />
+			<field name="xml_s5_lr_tab1_click" type="text" label="TPL_FIELD_FIXEDTAB1CLICK_LABEL" description="TPL_FIELD_FIXEDTAB1CLICK_DESC" />
+			<field name="xml_s5_lr_tab1_left_right" type="select" default="right" label="TPL_FIELD_FIXEDTAB1POSITION_LABEL" description="TPL_FIELD_FIXEDTAB1POSITION_DESC">
+				<option value="left">TPL_FIELD_FIXEDTAB1POSITION_01</option>
+				<option value="right">TPL_FIELD_FIXEDTAB1POSITION_02</option>
+			</field>
+			</field>
+			<field page="Layout" type="fixed" title="Edit Tab 2" css="fixed-tab fixed-tab2 tool-title rotate-270" icon="appndcog" callback="function(){this.popup.open()}">
+			<field name="1spacer_custom" type="spacer" label="TPL_FIELD_FIXEDTAB2LABEL_LABEL" />
+			<field name="xml_s5_lr_tab2_text" type="text" label="TPL_FIELD_FIXEDTAB2TEXT_LABEL" description="TPL_FIELD_FIXEDTAB2TEXT_DESC" />
+			<field name="xml_s5_lr_tab2_vp" type="text" default="30" label="TPL_FIELD_FIXEDTAB2VERTICAL_LABEL" description="TPL_FIELD_FIXEDTAB2VERTICAL_DESC" />
+			<field name="xml_s5_lr_tab2_height" type="text" default="100" label="TPL_FIELD_FIXEDTAB2HEIGHT_LABEL" description="TPL_FIELD_FIXEDTAB2HEIGHT_DESC" />
+			<field name="xml_s5_lr_tab2_class" type="text" label="TPL_FIELD_FIXEDTAB2CLASS_LABEL" description="TPL_FIELD_FIXEDTAB2CLASS_DESC" />
+			<field name="xml_s5_lr_tab2_click" type="text" label="TPL_FIELD_FIXEDTAB2CLICK_LABEL" description="TPL_FIELD_FIXEDTAB2CLICK_DESC" />
+			<field name="xml_s5_lr_tab2_left_right" type="select" default="right" label="TPL_FIELD_FIXEDTAB2POSITION_LABEL" description="TPL_FIELD_FIXEDTAB2POSITION_DESC">
+				<option value="left">TPL_FIELD_FIXEDTAB2POSITION_01</option>
+				<option value="right">TPL_FIELD_FIXEDTAB2POSITION_02</option>
+			</field>
+			</field>
+			<field page="Layout" type="custom" intro="This is the scroll to top arrow that will show in the footer area of the website. On click it throws you back up to the top of the page. You can enable or disable this from showing on the frontend." css="stt-opt">
+			<field name="xml_s5_scrolltotop" css="right" type="radio" vars="yes:no|TPL_FIELD_OPTION_ENABLED:TPL_FIELD_OPTION_DISABLED" default="yes" description="TPL_FIELD_FONTRESIZER_DESC" />
+			<field type="title" title="Scroll Arrow:" css="tool-title right arrow-ub" />
+			</field>
+			<field version="ge,4.0" cms="j" page="Logo" name="logo_instructions_J" type="spacer" label="TPL_FIELD_LOGO_DESC_J" />
+			<field version="ge,4.0" cms="w" page="Logo" name="logo_instructions_W" type="spacer" label="TPL_FIELD_LOGO_DESC_W" />
+			<field version="ge,4.0" cms="j" page="Logo" name="xml_s5_logo_type" type="select" default="text" label="TPL_FIELD_LOGOTYPE_LABEL" description="TPL_FIELD_LOGOTYPE_DESC" callback="function(){var v=this.value();if(v=='text'){VG.showField('vertex[s5_logo_text]',true);VG.showField('vertex[s5_logo_image_file]',false)}else if(v=='image'){VG.showField('vertex[s5_logo_text]',false);VG.showField('vertex[s5_logo_image_file]',true)}else{VG.showField('vertex[s5_logo_text]',false);VG.showField('vertex[s5_logo_image_file]',false)}}" onload="callback">
+				<option value="css">TPL_FIELD_LOGOTYPE_OPTION1</option>
+				<option value="image">TPL_FIELD_LOGOTYPE_OPTION2</option>
+				<option value="module">TPL_FIELD_LOGOTYPE_OPTION3_J</option>
+				<option value="text">TPL_FIELD_LOGOTYPE_OPTION4</option>
+				<option value="none">TPL_FIELD_LOGOTYPE_OPTION5</option>
+			</field>
+			<field version="ge,4.0" cms="w" page="Logo" name="xml_s5_logo_type" type="select" default="text" label="TPL_FIELD_LOGOTYPE_LABEL" description="TPL_FIELD_LOGOTYPE_DESC" callback="function(){var v=this.value();if(v=='text'){VG.showField('vertex[s5_logo_text]',true);VG.showField('vertex[s5_logo_image_file]',false)}else if(v=='image'){VG.showField('vertex[s5_logo_text]',false);VG.showField('vertex[s5_logo_image_file]',true)}else{VG.showField('vertex[s5_logo_text]',false);VG.showField('vertex[s5_logo_image_file]',false)}}" onload="callback">
+				<option value="css">TPL_FIELD_LOGOTYPE_OPTION1</option>
+				<option value="image">TPL_FIELD_LOGOTYPE_OPTION2</option>
+				<option value="module">TPL_FIELD_LOGOTYPE_OPTION3_W</option>
+				<option value="text">TPL_FIELD_LOGOTYPE_OPTION4</option>
+				<option value="none">TPL_FIELD_LOGOTYPE_OPTION5</option>
+			</field>
+			<field version="ge,4.0" page="Logo" filter="raw" type="textarea" name="xml_s5_logo_text" label="TPL_FIELD_LOGOTEXT_LABEL" description="TPL_FIELD_LOGOTEXT_DESC" />
+			<field version="ge,4.0" page="Logo" name="xml_s5_logo_image_file" type="media" callback="function(){var el=document.getElementById('s5_logo_image_file');if(!el){if(window.s5bbif)el=window.s5bbif}if(!el)return;el.name='vertex[s5_logo_image_file]';this.className='';window.s5bbif=el}" label="TPL_FIELD_LOGOIMAGE_LABEL" description="TPL_FIELD_LOGOIMAGE_DESC" size="10" accept="image/*" />
+			<field page="Styling" name="xml_s5_module_ft_size" type="select" list="ft_size" default="default" label="TPL_FIELD_MODULEFONTSIZE_LABEL" description="TPL_FIELD_MODULEFONTSIZE_DESC" />
+			<field page="Styling" name="xml_s5_component_ft_size" type="select" list="ft_size" default="default" label="TPL_FIELD_COMPONENTFONTSIZE_LABEL" description="TPL_FIELD_COMPONENTFONTSIZE_DESC" />
+			<field page="Styling" name="xml_s5_parent_menu_ft_size" type="select" list="ft_size" default="default" label="TPL_FIELD_PARENTMENUFONTSIZE_LABEL" description="TPL_FIELD_PARENTMENUFONTSIZE_DESC" />
+			<field page="Styling" name="xml_s5_sub_menu_ft_size" type="select" list="ft_size" default="default" label="TPL_FIELD_SUBMENUFONTSIZE_LABEL" description="TPL_FIELD_SUBMENUFONTSIZE_DESC" />
+			<field page="Styling" name="xml_s5_fonts" type="select" g="1" default="Cantarell" label="TPL_FIELD_SITEFONT_LABEL" description="TPL_FIELD_SITEFONT_DESC" show_search="true" />
+			<field page="Styling" name="xml_s5_fstyle" type="text" label="TPL_FIELD_FONTSTYLE_LABEL" description="TPL_FIELD_FONTSTYLE_DESC" />
+			<field page="Styling" cms="j" version="ge,2.0" name="xml_s5_bootstrap" type="select" default="light" label="TPL_FIELD_BOOTSTRAP_LABEL" description="TPL_FIELD_BOOTSTRAP_DESC">
+				<option value="none">TPL_FIELD_BOOTSTRAP_O1</option>
+				<option value="light">TPL_FIELD_BOOTSTRAP_O2</option>
+				<option value="dark">TPL_FIELD_BOOTSTRAP_O3</option>
+			</field>
+			<field page="Styling" name="xml_s5_thirdparty" cms="j" type="radio" vars="enabled:disabled|Enabled:Disabled" default="enabled" label="TPL_FIELD_THIRDPARTY_LABEL" description="TPL_FIELD_THIRDPARTY_DESC" />
+			<field page="Styling" name="xml_s5_favicon" type="media" callback="function(){var el=document.getElementById('s5_favicon');if(!el){if(window.s5bbif)el=window.s5bbif}if(!el)return;el.name='vertex[s5_favicon]';this.className='';window.s5bbif=el}" label="TPL_FIELD_FAVICON_LABEL" description="TPL_FIELD_FAVICON_DESC" size="10" accept="image/*" />
+			<field page="Styling" name="spacer_notice" label="TPL_FIELD_TABINSTRUCTIONS_LABEL" type="spacer" />
+			<field page="Styling" name="xml_s5_lr_tab_border" type="text:6:6" default="838383" size="6" label="TPL_FIELD_FIXEDTABBORDER_LABEL" description="TPL_FIELD_FIXEDTABBORDER_DESC" />
+			<field page="Styling" name="xml_s5_lr_tab_color" type="text:6:6" default="FFFFFF" size="6" label="TPL_FIELD_FIXEDTABBACKGROUND_LABEL" description="TPL_FIELD_FIXEDTABBACKGROUND_DESC" />
+			<field page="Styling" name="xml_s5_lr_tab_font" type="text:6:6" default="323232" size="6" label="TPL_FIELD_FIXEDTABFONTCOLOR_LABEL" description="TPL_FIELD_FIXEDTABFONTCOLOR_DESC" />
+			<field cms="w" page="Menu" name="xml_s5_menu_notice1" type="spacer:vertex-plain-spacer" label="TPL_FIELD_MENU_NOTICE1_W" />
+			<field page="Menu" name="xml_s5_show_menu" type="radio" vars="show:hide|Enable:Disable" default="show" label="TPL_FIELD_MAINMENU_SOH" description="" />
+			<field cms="j" page="Menu" name="s5_menu_type" type="menujs" default="mainmenu" label="TPL_FIELD_MAINMENU_LABEL" description="TPL_FIELD_MAINMENU_DESC" />
+			<field cms="j" page="Menu" name="xml_s5_menu_type_language_switch" type="radio" vars="enabled:disabled|Enabled:Disabled" default="enabled" label="TPL_FIELD_MAINMENULANG_LABEL" description="TPL_FIELD_MAINMENULANG_DESC" />
+			<field page="Menu" name="s5_maxdepth" type="text" default="10" label="TPL_FIELD_MAINMENU_LEVELS" description="" />
+			<field page="Menu" name="s5_duration" type="text" default="1000" label="TPL_FIELD_MAINMENU_OD" description="" />
+			<field page="Menu" name="s5_hide_delay" type="text" default="500" label="TPL_FIELD_MAINMENU_HD" description="" />
+			<field page="Menu" name="s5_opacity" type="text" default="100" label="Opacity" description="" />
+			<field page="Menu" name="s5_orientation" type="select" default="horizontal" label="TPL_FIELD_MAINMENU_ORIEN" description="">
+				<option value="horizontal">TPL_FIELD_MAINMENU_ORIEN_H</option>
+				<option value="vertical">TPL_FIELD_MAINMENU_ORIEN_V</option>
+			</field>
+			<field page="Menu" name="s5_effect" type="select" default="2" label="TPL_FIELD_MAINMENU_EFFECT" description="">
+				<option value="0">TPL_FIELD_MAINMENU_EFFECT_S</option>
+				<option value="1">TPL_FIELD_MAINMENU_EFFECT_F</option>
+				<option value="2">TPL_FIELD_MAINMENU_EFFECT_SF</option>
+				<option value="3">TPL_FIELD_MAINMENU_EFFECT_SP</option>
+			</field>
+			<field page="Menu" version="ge,2.0" name="xml_s5_menu_onclick" type="radio" vars="enabled:disabled|Enabled:Disabled" default="enabled" label="TPL_FIELD_MAINMENU_ONCLICK_LABEL" description="TPL_FIELD_MAINMENU_ONCLICK_DESC" />
+			<field page="Menu" name="s5_flex_modules" cms="w" type="number" default="2" min="0" max="255" size="4" label="TPL_FIELD_MAINMENU_MOD_POS" description="TPL_FIELD_MAINMENU_MOD_POS_DESC" />
+			<field page="Menu" name="xml_s5_menudetach" type="radio" vars="yes:no|TPL_FIELD_OPTION_ENABLED:TPL_FIELD_OPTION_DISABLED" default="no" label="TPL_MENUFLOATING" description="TPL_MENUFLOATING_DESC" 
+			callback="function(){
+			var v=this.value();
+			if(v=='no'){
+			VG.showField('vertex[s5_floating_menu_notice1]',false);
+			VG.showField('vertex[s5_initialmenufloat]',false);
+			VG.showField('vertex[s5_fmenufullwidth]',false);
+			VG.showField('vertex[s5_fmenufullwidthcenter]',false);
+			VG.showField('vertex[s5_menufloattop]',false);
+			VG.showField('vertex[s5_fmenuslidein]',false);
+			VG.showField('vertex[s5_menumilliseconds]',false);
+			VG.showField('vertex[s5_menufloat_bordersize]',false);
+			VG.showField('vertex[s5_menufloat_bordercolor]',false);
+			VG.showField('vertex[s5_menufloatbackstart]',false);
+			VG.showField('vertex[s5_menufloatbackend]',false);
+			VG.showField('vertex[s5_menuleftmargin]',false);
+			VG.showField('vertex[s5_menuleftpadding]',false);
+			VG.showField('vertex[s5_menurightmargin]',false);
+			VG.showField('vertex[s5_menurightpadding]',false);
+			VG.showField('vertex[s5_fmenuheight]',false);
+			VG.showField('vertex[s5_menufloatbackgroundimage]',false);
+			VG.showField('vertex[s5_menufloat_opacity]',false);
+			VG.showField('vertex[s5_fmenudropshadowsize]',false);
+			VG.showField('vertex[s5_fmenudropshadowopacity]',false);
+			}else{
+			VG.showField('vertex[s5_floating_menu_notice1]',true);
+			VG.showField('vertex[s5_initialmenufloat]',true);
+			VG.showField('vertex[s5_fmenufullwidth]',true);
+			VG.showField('vertex[s5_fmenufullwidthcenter]',true);
+			VG.showField('vertex[s5_menufloattop]',true);
+			VG.showField('vertex[s5_fmenuslidein]',true);
+			VG.showField('vertex[s5_menumilliseconds]',true);
+			VG.showField('vertex[s5_menufloat_bordersize]',true);
+			VG.showField('vertex[s5_menufloat_bordercolor]',true);
+			VG.showField('vertex[s5_menufloatbackstart]',true);
+			VG.showField('vertex[s5_menufloatbackend]',true);
+			VG.showField('vertex[s5_menuleftmargin]',true);
+			VG.showField('vertex[s5_menuleftpadding]',true);
+			VG.showField('vertex[s5_menurightmargin]',true);
+			VG.showField('vertex[s5_menurightpadding]',true);
+			VG.showField('vertex[s5_fmenuheight]',true);
+			VG.showField('vertex[s5_menufloatbackgroundimage]',true);
+			VG.showField('vertex[s5_menufloat_opacity]',true);
+			VG.showField('vertex[s5_fmenudropshadowsize]',true);
+			VG.showField('vertex[s5_fmenudropshadowopacity]',true);
+			}}" onload="callback" />
+			<field page="Menu" name="xml_s5_floating_menu_notice1" type="spacer:vertex-plain-spacer" label="TPL_FIELD_FLOATING_MENU_NOTICE1" />
+			<field page="Menu" name="xml_s5_initialmenufloat" type="text" default="" label="TPL_INITIALMENUFLOAT_LABEL" description="TPL_INITIALMENUFLOAT_DESC" />
+			<field page="Menu" name="xml_s5_fmenufullwidth" type="radio" vars="yes:no|Enable:Disable" default="no" label="TPL_MENUFLOATING_FULLWIDTH_LABEL" description="TPL_MENUFLOATING_FULLWIDTH_DESC" />
+			<field page="Menu" name="xml_s5_fmenufullwidthcenter" type="radio" vars="yes:no|Enable:Disable" default="no" label="TPL_MENUFLOATING_CENTER_LABEL" description="TPL_MENUFLOATING_CENTER_DESC" />
+			<field page="Menu" name="xml_s5_menufloattop" type="text" default="" label="TPL_MENUFLOATING_TOP_LABEL" description="TPL_MENUFLOATING_TOP_DESC" />
+			<field page="Menu" name="xml_s5_fmenuslidein" type="radio" vars="yes:no|Enable:Disable" default="no" label="TPL_MENUFLOATING_SLIDEIN_LABEL" description="TPL_MENUFLOATING_SLIDEIN_DESC" />
+			<field page="Menu" name="xml_s5_menumilliseconds" type="text" default="" label="TPL_MENUFLOATING_MILLISECONDS_LABEL" description="TPL_MENUFLOATING_MILLISECONDS_DESC" />
+			<field page="Menu" name="xml_s5_menufloat_bordersize" type="text" default="" label="TPL_MENUFLOATING_BORDERSIZE_LABEL" description="TPL_MENUFLOATING_BORDERSIZE_DESC" />
+			<field page="Menu" name="xml_s5_menufloat_bordercolor" type="text:6:6" default="" label="TPL_MENUFLOATING_BORDERCOLOR_LABEL" description="TPL_MENUFLOATING_BORDERCOLOR_DESC" />
+			<field page="Menu" name="xml_s5_menufloatbackstart" type="text:6:6" default="" label="TPL_FMENUFLOATGRADSTART_LABEL" description="TPL_FMENUFLOATGRADSTART_DESC" />
+			<field page="Menu" name="xml_s5_menufloatbackend" type="text:6:6" default="" label="TPL_FMENUFLOATGRADEND_LABEL" description="TPL_FMENUFLOATGRADEND_DESC" />
+			<field page="Menu" name="xml_s5_menuleftmargin" type="text" default="" label="TPL_MENUFLOATING_LEFTMARGIN_LABEL" description="TPL_MENUFLOATING_LEFTMARGIN_DESC" />
+			<field page="Menu" name="xml_s5_menuleftpadding" type="text" default="" label="TPL_MENUFLOATING_LEFTPADDING_LABEL" description="TPL_MENUFLOATING_LEFTPADDING_DESC" />
+			<field page="Menu" name="xml_s5_menurightmargin" type="text" default="" label="TPL_MENUFLOATING_RIGHTMARGIN_LABEL" description="TPL_MENUFLOATING_RIGHTMARGIN_DESC" />
+			<field page="Menu" name="xml_s5_menurightpadding" type="text" default="" label="TPL_MENUFLOATING_RIGHTPADDING_LABEL" description="TPL_MENUFLOATING_RIGHTPADDING_DESC" />
+			<field page="Menu" name="xml_s5_fmenuheight" type="text" default="" label="TPL_MENUFLOATING_HEIGHT_LABEL" description="TPL_MENUFLOATING_HEIGHT_DESC" />
+			<field page="Menu" name="xml_s5_menufloatbackgroundimage" type="text" default="" label="TPL_MENUFLOATING_BACKIMAGE_LABEL" description="TPL_MENUFLOATING_BACKIMAGE_DESC" />
+			<field page="Menu" name="xml_s5_menufloat_opacity" type="text" default="" label="TPL_MENUFLOATING_BACKOPACITY_LABEL" description="TPL_MENUFLOATING_BACKOPACITY_DESC" />
+			<field page="Menu" name="xml_s5_fmenudropshadowsize" type="text" default="" label="TPL_MENUFLOATING_SSIZE_LABEL" description="TPL_MENUFLOATING_SSIZE_DESC" />
+			<field page="Menu" name="xml_s5_fmenudropshadowopacity" type="text" default="" label="TPL_MENUFLOATING_OPACITY_LABEL" description="TPL_MENUFLOATING_OPACITY_DESC" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_notice" type="spacer" label="TPL_FIELD_RESPON_DESC" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive" type="radio" vars="enabled:disabled|Enabled:Disabled" default="enabled" label="TPL_FIELD_RESPONSIVE_LABEL" description="TPL_FIELD_RESPONSIVE_DESC" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_ie" type="radio" vars="enabled:disabled|Enabled:Disabled" default="disabled" label="TPL_FIELD_RESPONSIVEIE_LABEL" description="TPL_FIELD_RESPONSIVEIE_DESC" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_user_scalable" type="radio" vars="enabled:disabled|Enabled:Disabled" default="enabled" label="TPL_FIELD_RESPONSIVESCALABLE_LABEL" description="TPL_FIELD_RESPONSIVESCALABLE_DESC" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_tablet_hide" type="multselect" vars="#s5_header_area1,#s5_top_row1_area1,#s5_top_row2_area1,#s5_top_row3_area1,#s5_above_columns_wrap1,#s5_middle_top_wrap,#s5_above_body_wrap,#s5_below_body_wrap,#s5_left_top_wrap,#s5_left_wrap,#s5_left_inset_wrap,#s5_left_bottom_wrap,#s5_right_top_wrap,#s5_right_wrap,#s5_right_inset_wrap,#s5_right_bottom_wrap,#s5_middle_bottom_wrap,#s5_below_columns_wrap1,#s5_bottom_row1_area1,#s5_bottom_row2_area1,#s5_bottom_row3_area1,#s5_footer_area1,#s5_pos_custom_1,#s5_pos_custom_2,#s5_pos_custom_3,#s5_pos_custom_4,#s5_pos_custom_5,#s5_pos_custom_6" default="" label="TPL_FIELD_RESPONSIVETABLET_LABEL" description="TPL_FIELD_RESPONSIVETABLET_DESC" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_mobile_hide" type="multselect" vars="#s5_header_area1,#s5_top_row1_area1,#s5_top_row2_area1,#s5_top_row3_area1,#s5_above_columns_wrap1,#s5_middle_top_wrap,#s5_above_body_wrap,#s5_below_body_wrap,#s5_left_top_wrap,#s5_left_wrap,#s5_left_inset_wrap,#s5_left_bottom_wrap,#s5_right_top_wrap,#s5_right_wrap,#s5_right_inset_wrap,#s5_right_bottom_wrap,#s5_middle_bottom_wrap,#s5_below_columns_wrap1,#s5_bottom_row1_area1,#s5_bottom_row2_area1,#s5_bottom_row3_area1,#s5_footer_area1,#s5_pos_custom_1,#s5_pos_custom_2,#s5_pos_custom_3,#s5_pos_custom_4,#s5_pos_custom_5,#s5_pos_custom_6" default="" label="TPL_FIELD_RESPONSIVEMOBILE_LABEL" description="TPL_FIELD_RESPONSIVEMOBILE_DESC" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_center_single_column" type="select" default="default" label="TPL_FIELD_RESPONSIVECENTERSINGLECOLUMN_LABEL" description="TPL_FIELD_RESPONSIVECENTERSINGLECOLUMN_DESC">
+				<option value="default">TPL_FIELD_RESPONSIVECENTERSINGLECOLUMN_OPTION1</option>
+				<option value="1050">TPL_FIELD_RESPONSIVECENTERSINGLECOLUMN_OPTION11</option>
+				<option value="1000">TPL_FIELD_RESPONSIVECENTERSINGLECOLUMN_OPTION10</option>
+				<option value="950">TPL_FIELD_RESPONSIVECENTERSINGLECOLUMN_OPTION2</option>
+				<option value="900">TPL_FIELD_RESPONSIVECENTERSINGLECOLUMN_OPTION3</option>
+				<option value="850">TPL_FIELD_RESPONSIVECENTERSINGLECOLUMN_OPTION4</option>
+				<option value="800">TPL_FIELD_RESPONSIVECENTERSINGLECOLUMN_OPTION5</option>
+				<option value="750">TPL_FIELD_RESPONSIVECENTERSINGLECOLUMN_OPTION6</option>
+				<option value="700">TPL_FIELD_RESPONSIVECENTERSINGLECOLUMN_OPTION7</option>
+				<option value="650">TPL_FIELD_RESPONSIVECENTERSINGLECOLUMN_OPTION8</option>
+				<option value="600">TPL_FIELD_RESPONSIVECENTERSINGLECOLUMN_OPTION9</option>
+			</field>
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_fluid_notice2" type="spacer:vertex-plain-spacer" label="TPL_FIELD_FLUID_NOTICE2" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_fluid_comibine_columns" type="select" default="default" label="TPL_FIELD_RESPONSIVEFLUIDCOMBINECOLUMNS_LABEL" description="TPL_FIELD_RESPONSIVEFLUIDCOMBINECOLUMNS_DESC">
+				<option value="default">TPL_FIELD_RESPONSIVEFLUIDCOMBINECOLUMNS_OPTION1</option>
+				<option value="1050">TPL_FIELD_RESPONSIVEFLUIDCOMBINECOLUMNS_OPTION2</option>
+				<option value="1000">TPL_FIELD_RESPONSIVEFLUIDCOMBINECOLUMNS_OPTION3</option>
+				<option value="950">TPL_FIELD_RESPONSIVEFLUIDCOMBINECOLUMNS_OPTION4</option>
+				<option value="900">TPL_FIELD_RESPONSIVEFLUIDCOMBINECOLUMNS_OPTION5</option>
+				<option value="850">TPL_FIELD_RESPONSIVEFLUIDCOMBINECOLUMNS_OPTION6</option>
+				<option value="800">TPL_FIELD_RESPONSIVEFLUIDCOMBINECOLUMNS_OPTION7</option>
+				<option value="750">TPL_FIELD_RESPONSIVEFLUIDCOMBINECOLUMNS_OPTION8</option>
+				<option value="700">TPL_FIELD_RESPONSIVEFLUIDCOMBINECOLUMNS_OPTION9</option>
+				<option value="650">TPL_FIELD_RESPONSIVEFLUIDCOMBINECOLUMNS_OPTION10</option>
+				<option value="600">TPL_FIELD_RESPONSIVEFLUIDCOMBINECOLUMNS_OPTION11</option>
+			</field>
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_fluid_single_column" type="select" default="default" label="TPL_FIELD_RESPONSIVEFLUIDSINGLECOLUMN_LABEL" description="TPL_FIELD_RESPONSIVEFLUIDSINGLECOLUMN_DESC">
+				<option value="default">TPL_FIELD_RESPONSIVEFLUIDSINGLECOLUMN_OPTION1</option>
+				<option value="1050">TPL_FIELD_RESPONSIVEFLUIDSINGLECOLUMN_OPTION2</option>
+				<option value="1000">TPL_FIELD_RESPONSIVEFLUIDSINGLECOLUMN_OPTION3</option>
+				<option value="950">TPL_FIELD_RESPONSIVEFLUIDSINGLECOLUMN_OPTION4</option>
+				<option value="900">TPL_FIELD_RESPONSIVEFLUIDSINGLECOLUMN_OPTION5</option>
+				<option value="850">TPL_FIELD_RESPONSIVEFLUIDSINGLECOLUMN_OPTION6</option>
+				<option value="800">TPL_FIELD_RESPONSIVEFLUIDSINGLECOLUMN_OPTION7</option>
+				<option value="750">TPL_FIELD_RESPONSIVEFLUIDSINGLECOLUMN_OPTION8</option>
+				<option value="700">TPL_FIELD_RESPONSIVEFLUIDSINGLECOLUMN_OPTION9</option>
+				<option value="650">TPL_FIELD_RESPONSIVEFLUIDSINGLECOLUMN_OPTION10</option>
+				<option value="600">TPL_FIELD_RESPONSIVEFLUIDSINGLECOLUMN_OPTION11</option>
+			</field>
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_fixed_notice3" type="spacer:vertex-plain-spacer" label="TPL_FIELD_FLUID_NOTICE3" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_column_increase" type="radio" vars="enabled:disabled|Enabled:Disabled" default="enabled" label="TPL_FIELD_RESPONSIVECOLUMNINCREASE_LABEL" description="TPL_FIELD_RESPONSIVECOLUMNINCREASE_DESC" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_columns_small_tablet" type="select" default="default" label="TPL_FIELD_RESPONSIVETABLETCOLUMNS_LABEL" description="TPL_FIELD_RESPONSIVETABLETCOLUMNS_DESC">
+				<option value="default">TPL_FIELD_RESPONSIVETABLETCOLUMNS_OPTION1</option>
+				<option value="reduce">TPL_FIELD_RESPONSIVETABLETCOLUMNS_OPTION2</option>
+				<option value="single">TPL_FIELD_RESPONSIVETABLETCOLUMNS_OPTION3</option>
+			</field>
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_row_widths_notice" type="spacer" label="TPL_FIELD_RESPONROWWIDTHS_DESC" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_row_widths_top_row_1" type="select" default="default" label="TPL_FIELD_RESPONSIVEROWWIDTHSTOPROW1_LABEL" description="TPL_FIELD_RESPONSIVEROWWIDTHSTOPROW1_DESC" list="responsive_row_widths" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_row_widths_top_row_2" type="select" default="default" label="TPL_FIELD_RESPONSIVEROWWIDTHSTOPROW2_LABEL" description="TPL_FIELD_RESPONSIVEROWWIDTHSTOPROW2_DESC" list="responsive_row_widths" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_row_widths_top_row_3" type="select" default="default" label="TPL_FIELD_RESPONSIVEROWWIDTHSTOPROW3_LABEL" description="TPL_FIELD_RESPONSIVEROWWIDTHSTOPROW3_DESC" list="responsive_row_widths" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_row_widths_above_columns" type="select" default="default" label="TPL_FIELD_RESPONSIVEROWWIDTHSABOVECOLUMNS_LABEL" description="TPL_FIELD_RESPONSIVEROWWIDTHSABOVECOLUMNS_DESC" list="responsive_row_widths" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_row_widths_middle_top" type="select" default="default" label="TPL_FIELD_RESPONSIVEROWWIDTHSMIDDLETOP_LABEL" description="TPL_FIELD_RESPONSIVEROWWIDTHSMIDDLETOP_DESC" list="responsive_row_widths" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_row_widths_above_body" type="select" default="default" label="TPL_FIELD_RESPONSIVEROWWIDTHSABOVEBODY_LABEL" description="TPL_FIELD_RESPONSIVEROWWIDTHSABOVEBODY_DESC" list="responsive_row_widths" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_row_widths_middle_bottom" type="select" default="default" label="TPL_FIELD_RESPONSIVEROWWIDTHSMIDDLEBOTTOM_LABEL" description="TPL_FIELD_RESPONSIVEROWWIDTHSMIDDLEBOTTOM_DESC" list="responsive_row_widths" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_row_widths_below_body" type="select" default="default" label="TPL_FIELD_RESPONSIVEROWWIDTHSBELOWBODY_LABEL" description="TPL_FIELD_RESPONSIVEROWWIDTHSBELOWBODY_DESC" list="responsive_row_widths" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_row_widths_below_columns" type="select" default="default" label="TPL_FIELD_RESPONSIVEROWWIDTHSBELOWCOLUMNS_LABEL" description="TPL_FIELD_RESPONSIVEROWWIDTHSBELOWCOLUMNS_DESC" list="responsive_row_widths" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_row_widths_bottom_row_1" type="select" default="default" label="TPL_FIELD_RESPONSIVEROWWIDTHSBOTTOMROW1_LABEL" description="TPL_FIELD_RESPONSIVEROWWIDTHSBOTTOMROW1_DESC" list="responsive_row_widths" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_row_widths_bottom_row_2" type="select" default="default" label="TPL_FIELD_RESPONSIVEROWWIDTHSBOTTOMROW2_LABEL" description="TPL_FIELD_RESPONSIVEROWWIDTHSBOTTOMROW2_DESC" list="responsive_row_widths" />
+			<field page="Responsive Layout" version="ge,2.0" name="xml_s5_responsive_row_widths_bottom_row_3" type="select" default="default" label="TPL_FIELD_RESPONSIVEROWWIDTHSBOTTOMROW3_LABEL" description="TPL_FIELD_RESPONSIVEROWWIDTHSBOTTOMROW3_DESC" list="responsive_row_widths" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_bar_notice" type="spacer" label="TPL_FIELD_RESPONMOBILE_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_layout" default="dropdowns" type="select" label="TPL_FIELD_RESPONSIVE_LAYOUT_LABEL" description="TPL_FIELD_RESPONSIVE_LAYOUT_DESC" callback="function(){var v=this.value();if(v=='sidebar'){
+			VG.showField('vertex[s5_mobile_bar_notice2]',false);
+			VG.showField('vertex[s5_responsive_mobile_bar_shadow_opacity]',false);
+			VG.showField('vertex[s5_mobile_bar_notice3]',true);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_start]',true);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_stop]',true);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_input_bg]',true);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_menu_subs_bg]',true);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_section_border]',true);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_font_color]',true);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_inputbox_font_color]',true);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_inputbox_bg_color]',true);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_inputbox_border_color]',true);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_menu_auto_open]',true);
+			VG.showField('vertex[s5_responsive_mobile_bar_position]',true);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_large_width]',true);
+			}else{
+			VG.showField('vertex[s5_mobile_bar_notice2]',true);
+			VG.showField('vertex[s5_responsive_mobile_bar_shadow_opacity]',true);
+			VG.showField('vertex[s5_mobile_bar_notice3]',false);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_start]',false);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_stop]',false);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_input_bg]',false);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_menu_subs_bg]',false);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_section_border]',false);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_font_color]',false);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_inputbox_font_color]',false);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_inputbox_bg_color]',false);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_inputbox_border_color]',false);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_menu_auto_open]',false);
+			VG.showField('vertex[s5_responsive_mobile_bar_position]',false);
+			VG.showField('vertex[s5_responsive_mobile_sidebar_large_width]',false);
+			}}" onload="callback">
+				<option value="sidebar">TPL_FIELD_RESPONSIVE_LAYOUT_OPTION1</option>
+				<option value="dropdowns">TPL_FIELD_RESPONSIVE_LAYOUT_OPTION2</option>
+			</field>
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_mobile_bar_notice1" type="spacer:vertex-plain-spacer" label="TPL_FIELD_MOBILE_BAR_NOTICE1" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_bar_trigger" type="text" default="750" label="TPL_FIELD_RESPONSIVEBARTRIGGER_LABEL" description="TPL_FIELD_RESPONSIVEBARTRIGGER_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_sidebar_large_width" type="text" default="400" label="TPL_FIELD_RESPONSIVELARGEWIDTH_LABEL" description="TPL_FIELD_RESPONSIVELARGEWIDTH_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_fonts_responsive_mobile_bar" type="select" g="1" default="Oswald" label="TPL_FIELD_RESPONSIVEBARFONT_LABEL" description="TPL_FIELD_RESPONSIVEBARFONT_DESC" show_search="true" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_fstyle_responsive_mobile_bar" type="text" label="TPL_FIELD_RESPONSIVEBARFONTSTYLE_LABEL" description="TPL_FIELD_RESPONSIVEBARFONTSTYLE_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_bar_font_color" type="text:6:6" default="FFFFFF" size="6" label="TPL_FIELD_RESPONSIVEFONTCOLOR_LABEL" description="TPL_FIELD_RESPONSIVEFONTCOLOR_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_bar_style" type="select" default="light" label="TPL_FIELD_RESPONSIVEBARSTYLE_LABEL" description="TPL_FIELD_RESPONSIVEBARSTYLE_DESC">
+				<option value="dark">TPL_FIELD_RESPONSIVEBARSTYLE_OPTION1</option>
+				<option value="light">TPL_FIELD_RESPONSIVEBARSTYLE_OPTION2</option>
+			</field>
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_bar_static" type="radio" vars="enabled:disabled|Enabled:Disabled" default="disabled" label="TPL_FIELD_RESPONSIVEBARSTATIC_LABEL" description="TPL_FIELD_RESPONSIVEBARSTATIC_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_bar_start" type="text:6:6" default="272727" size="6" label="TPL_FIELD_RESPONSIVEGRADSTART_LABEL" description="TPL_FIELD_RESPONSIVEGRADSTART_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_bar_stop" type="text:6:6" default="0B0B0B" size="6" label="TPL_FIELD_RESPONSIVEGRADSTOP_LABEL" description="TPL_FIELD_RESPONSIVEGRADSTOP_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_bar_active_color" type="text:6:6" default="BBBABA" size="6" label="TPL_FIELD_RESPONSIVEACTIVECOLOR_LABEL" description="TPL_FIELD_RESPONSIVEACTIVECOLOR_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_bar_active" type="radio" vars="enabled:disabled|Enabled:Disabled" default="enabled" label="TPL_FIELD_RESPONSIVEACTENAB_LABEL" description="TPL_FIELD_RESPONSIVEACTENAB_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_bar_search" type="radio" vars="enabled:disabled|Enabled:Disabled" default="enabled" label="TPL_FIELD_RESPONSIVESEARCHENAB_LABEL" description="TPL_FIELD_RESPONSIVESEARCHENAB_DESC" />
+			<field cms="w" page="Responsive Nav" name="xml_s5_responsive_menu_notice1" type="spacer:vertex-plain-spacer" label="TPL_FIELD_MENU_NOTICE1_W" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_bar_menu" type="radio" vars="enabled:disabled|Enabled:Disabled" default="enabled" label="TPL_FIELD_RESPONSIVEENABMENU_LABEL" description="TPL_FIELD_RESPONSIVEENABMENU_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_bar_position" type="radio" vars="enabled:disabled|Enabled:Disabled" default="disabled" label="TPL_FIELD_RESPONSIVEBARPOSITION_LABEL" description="TPL_FIELD_RESPONSIVEBARPOSITION_DESC" />
+			<field cms="j" page="Responsive Nav" name="s5_responsive_menu" version="ge,2.0" type="menujs" default="mainmenu" label="TPL_FIELD_RESPONSIVEMENU_LABEL" description="TPL_FIELD_RESPONSIVEMENU_DESC" />
+			<field cms="j" page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_menu_language_switch" type="radio" vars="enabled:disabled|Enabled:Disabled" default="enabled" label="TPL_FIELD_RESPONSIVEMENULANG_LABEL" description="TPL_FIELD_RESPONSIVEMENULANG_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_menu_end_level" default="10" type="select" label="TPL_FIELD_RESPONSIVELEVELS_LABEL" description="TPL_FIELD_RESPONSIVELEVELS_DESC">
+				<option value="0">TPL_FIELD_OPTIONALL</option>
+				<option value="1">TPL_FIELD_OPTION1</option>
+				<option value="2">TPL_FIELD_OPTION2</option>
+				<option value="3">TPL_FIELD_OPTION3</option>
+				<option value="4">TPL_FIELD_OPTION4</option>
+				<option value="5">TPL_FIELD_OPTION5</option>
+				<option value="6">TPL_FIELD_OPTION6</option>
+				<option value="7">TPL_FIELD_OPTION7</option>
+				<option value="8">TPL_FIELD_OPTION8</option>
+				<option value="9">TPL_FIELD_OPTION9</option>
+				<option value="10">TPL_FIELD_OPTION10</option>
+			</field>
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_mobile_bar_notice2" type="spacer:vertex-plain-spacer" label="TPL_FIELD_MOBILE_BAR_NOTICE2" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_bar_shadow_opacity" type="text" default="0.6" label="TPL_FIELD_RESPONSIVEOPACITY_LABEL" description="TPL_FIELD_RESPONSIVEOPACITY_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_mobile_bar_notice3" type="spacer:vertex-plain-spacer" label="TPL_FIELD_MOBILE_BAR_NOTICE3" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_sidebar_start" type="text:6:6" default="414141" size="6" label="TPL_FIELD_RESPONSIVE_SIDEBAR_GRADSTART_LABEL" description="TPL_FIELD_RESPONSIVE_SIDEBAR_GRADSTART_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_sidebar_stop" type="text:6:6" default="414141" size="6" label="TPL_FIELD_RESPONSIVE_SIDEBAR_GRADSTOP_LABEL" description="TPL_FIELD_RESPONSIVE_SIDEBAR_GRADSTOP_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_sidebar_input_bg" type="text:6:6" default="303030" size="6" label="TPL_FIELD_RESPONSIVE_SIDEBAR_INPUT_BG_LABEL" description="TPL_FIELD_RESPONSIVE_SIDEBAR_INPUT_BG_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_sidebar_menu_subs_bg" type="text:6:6" default="2A2A2A" size="6" label="TPL_FIELD_RESPONSIVE_SIDEBAR_MENU_SUBS_BG_LABEL" description="TPL_FIELD_RESPONSIVE_SIDEBAR_MENU_SUBS_BG_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_sidebar_section_border" type="text:6:6" default="555555" size="6" label="TPL_FIELD_RESPONSIVE_SIDEBAR_SECTION_BORDER_LABEL" description="TPL_FIELD_RESPONSIVE_SIDEBAR_SECTION_BORDER_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_sidebar_font_color" type="text:6:6" default="FFFFFF" size="6" label="TPL_FIELD_RESPONSIVE_SIDEBAR_FONT_COLOR_LABEL" description="TPL_FIELD_RESPONSIVE_SIDEBAR_FONT_COLOR_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_sidebar_inputbox_font_color" type="text:6:6" default="666666" size="6" label="TPL_FIELD_RESPONSIVE_SIDEBAR_INPUTBOX_FONT_COLOR_LABEL" description="TPL_FIELD_RESPONSIVE_SIDEBAR_INPUTBOX_FONT_COLOR_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_sidebar_inputbox_bg_color" type="text:6:6" default="FFFFFF" size="6" label="TPL_FIELD_RESPONSIVE_SIDEBAR_INPUTBOX_BG_COLOR_LABEL" description="TPL_FIELD_RESPONSIVE_SIDEBAR_INPUTBOX_BG_COLOR_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_sidebar_inputbox_border_color" type="text:6:6" default="FFFFFF" size="6" label="TPL_FIELD_RESPONSIVE_SIDEBAR_BORDER_COLOR_LABEL" description="TPL_FIELD_RESPONSIVE_SIDEBAR_INPUTBOX_BORDER_COLOR_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_sidebar_menu_auto_open" default="open" type="select" label="TPL_FIELD_RESPONSIVE_SIDEBAR_MENU_AUTO_OPEN_LABEL" description="TPL_FIELD_RESPONSIVE_SIDEBAR_MENU_AUTO_OPEN_DESC">
+				<option value="open">TPL_FIELD_RESPONSIVE_SIDEBAR_MENU_AUTO_OPEN_OPTION1</option>
+				<option value="closed">TPL_FIELD_RESPONSIVE_SIDEBAR_MENU_AUTO_OPEN_OPTION2</option>
+			</field>
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_bar_login_register_notice" type="spacer" label="TPL_FIELD_RESPONLOGREG_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_links" type="radio" vars="enabled:disabled|Enabled:Disabled" default="enabled" label="TPL_FIELD_RESPONSIVELINKSENAB_LABEL" description="TPL_FIELD_RESPONSIVELINKSENAB_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_desktop_text" type="text" default="Desktop Version" label="TPL_FIELD_RESPONSIVEDESKTOPTEXT_LABEL" description="TPL_FIELD_RESPONSIVEDESKTOPTEXT_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_mobile_text" type="text" default="Mobile Version" label="TPL_FIELD_RESPONSIVEMOBILETEXT_LABEL" description="TPL_FIELD_RESPONSIVEMOBILETEXT_DESC" />
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_force_off_login" type="select" default="on" label="TPL_FIELD_RESPONSIVE_FORCE_OFF_LOGIN_LABEL" description="TPL_FIELD_RESPONSIVE_FORCE_OFF_LOGIN_DESC">
+				<option value="off">TPL_FIELD_RESPONSIVE_FORCE_OFF_OPTION1</option>
+				<option value="on">TPL_FIELD_RESPONSIVE_FORCE_OFF_OPTION2</option>
+			</field>
+			<field page="Responsive Nav" version="ge,2.0" name="xml_s5_responsive_force_off_register" type="select" default="on" label="TPL_FIELD_RESPONSIVE_FORCE_OFF_REGISTER_LABEL" description="TPL_FIELD_RESPONSIVE_FORCE_OFF_REGISTER_DESC">
+				<option value="off">TPL_FIELD_RESPONSIVE_FORCE_OFF_OPTION1</option>
+				<option value="on">TPL_FIELD_RESPONSIVE_FORCE_OFF_OPTION2</option>
+			</field>
+		</fieldset>
+		<fieldset version="le,1.0" name="s54" label="TPL_FIELD_MDS_LABEL" icon="mobile">
+			<field version="le,1.0" name="spacer_notice" type="spacer" label="TPL_FIELD_MOBILE_DESC" />
+			<field version="le,1.0" name="xml_s5_mobile_device_enable_disable" type="radio" vars="enabled:disabled|Enabled:Disabled" default="disabled" label="TPL_FIELD_MOBILELAYOUT_LABEL" description="TPL_FIELD_MOBILELAYOUT_DESC" 
+			callback="function(){
+			var v=this.value();
+			if(v=='disabled'){
+			VG.showField('vertex[s5_mobile_device_menu_subs]',false);
+			VG.showField('vertex[s5_mobile_device_menu_title]',false);
+			VG.showField('vertex[s5_mobile_device_login]',false);
+			VG.showField('vertex[s5_mobile_device_register]',false);
+			VG.showField('vertex[s5_mobile_device_pc_text]',false);
+			}else{
+			VG.showField('vertex[s5_mobile_device_menu_subs]',true);
+			VG.showField('vertex[s5_mobile_device_menu_title]',true);
+			VG.showField('vertex[s5_mobile_device_login]',true);
+			VG.showField('vertex[s5_mobile_device_register]',true);
+			VG.showField('vertex[s5_mobile_device_pc_text]',true);
+			}}"
+			onload="callback" />
+			<field version="le,1.0" name="xml_s5_mobile_device_menu_subs" type="select" default="first" label="TPL_FIELD_MOBILEMENUSUBS_LABEL" description="TPL_FIELD_MOBILEMENUSUBS_DESC">
+				<option value="first">TPL_FIELD_MOBILEMENUSUBS_01</option>
+				<option value="all">TPL_FIELD_MOBILEMENUSUBS_02</option>
+			</field>
+			<field version="le,1.0" name="xml_s5_mobile_device_menu_title" type="text" default="Select Menu" label="TPL_FIELD_SELECTMENU_LABEL" description="TPL_FIELD_SELECTMENU_DESC" />
+			<field version="le,1.0" name="xml_s5_mobile_device_login" type="radio" vars="enabled:disabled|Enabled:Disabled" default="enabled" label="TPL_FIELD_SHOWLOGIN_LABEL" description="TPL_FIELD_SHOWLOGIN_DESC" />
+			<field version="le,1.0" name="xml_s5_mobile_device_register" type="radio" vars="enabled:disabled|Enabled:Disabled" default="enabled" label="TPL_FIELD_MOBILEREGISTER_LABEL" description="TPL_FIELD_MOBILEREGISTER_DESC" />
+			<field version="le,1.0" name="xml_s5_mobile_device_pc_text" type="text" default="Show me the PC Version" label="TPL_FIELD_MOBILESHOWPC_LABEL" description="TPL_FIELD_MOBILESHOWPC_DESC" />
+		</fieldset>
+		<fieldset name="s56" label="TPL_FIELD_GO_LABEL" icon="tasks">
+			<field cms="w" name="s5_disable_filters" type="select:list" default="1" label="TPL_DISABLE_FILTERS_LABEL" description="TPL_DISABLE_FILTERS_DESC">
+				<option value="1">TPL_DISABLE_FILTERS_01</option>
+				<option value="0">TPL_DISABLE_FILTERS_02</option>
+			</field>
+			<field cms="w" name="demo_mode" type="select:list" default="0" label="TPL_DEMO_MODE_LABEL" description="TPL_DEMO_MODE_DESC">
+				<option value="1">TPL_DEMO_MODE_01</option>
+				<option value="0">TPL_DEMO_MODE_02</option>
+			</field>
+			<field name="xml_s5_compress_js" type="radio" vars="yes:no|TPL_FIELD_OPTION_ENABLED:TPL_FIELD_OPTION_DISABLED" default="no" label="TPL_FIELD_JSCOMPRESSION_LABEL" description="TPL_FIELD_JSCOMPRESSION_DESC" />
+			<field name="xml_s5_compress_css" type="radio" vars="yes:no|TPL_FIELD_OPTION_ENABLED:TPL_FIELD_OPTION_DISABLED" default="no" label="TPL_FIELD_CSSCOMPRESSION_LABEL" description="TPL_FIELD_CSSCOMPRESSION_DESC" />
+			<field name="xml_s5_compress_cache" type="text" default="900" label="TPL_FIELD_CACHECOMPRESSION_LABEL" description="TPL_FIELD_CACHECOMPRESSION_DESC" />
+			<field name="xml_s5_font_resizer" type="radio" vars="yes:no|TPL_FIELD_OPTION_ENABLED:TPL_FIELD_OPTION_DISABLED" default="yes" label="TPL_FIELD_FONTRESIZER_LABEL" description="TPL_FIELD_FONTRESIZER_DESC" />
+			<field name="xml_s5_font_awesome" cms="j" version="ge,2.0" type="radio" vars="enabled:disabled|Enabled:Disabled" default="enabled" label="TPL_FIELD_FONTAWESOME_LABEL" description="TPL_FIELD_FONTAWESOME_DESC" />
+			<field name="xml_s5_ionicons" type="radio" vars="enabled:disabled|Enabled:Disabled" default="disabled" label="TPL_FIELD_IONICONS_LABEL" description="TPL_FIELD_IONICONS_DESC" />
+			<field name="xml_s5_parallax_speed" type="text" default="8" label="TPL_PARALLAX_SPEED_LABEL" description="TPL_PARALLAX_SPEED_DESC" />
+			<field name="xml_s5_images_width" type="text" default="" label="TPL_FIELD_IMAGESWIDTH_LABEL" description="TPL_FIELD_IMAGESWIDTH_DESC" />
+			<field name="xml_s5_auto_height" type="radio" vars="yes:no|TPL_FIELD_OPTION_ENABLED:TPL_FIELD_OPTION_DISABLED" default="yes" label="TPL_FIELD_AUTOHEIGHT_LABEL" description="TPL_FIELD_AUTOHEIGHT_DESC" />
+			<field name="xml_s5_max_width" type="radio" vars="yes:no|TPL_FIELD_OPTION_ENABLED:TPL_FIELD_OPTION_DISABLED" default="yes" label="TPL_FIELD_MAXWIDTH_LABEL" description="TPL_FIELD_MAXWIDTH_DESC" />
+			<field name="xml_s5_seourl" type="text" label="TPL_FIELD_SEOURL_LABEL" description="TPL_FIELD_SEOURL_DESC" />
+			<field name="xml_s5_additional_scripts3" filter="raw" type="textarea" default="" label="TPL_FIELD_ADDT3_LABEL" description="TPL_FIELD_ADDT3_DESC" />
+			<field name="xml_s5_additional_scripts1" filter="raw" type="textarea" default="" label="TPL_FIELD_ADDT1_LABEL" description="TPL_FIELD_ADDT1_DESC" />
+			<field name="xml_s5_additional_scripts2" filter="raw" type="textarea" default="" label="TPL_FIELD_ADDT2_LABEL" description="TPL_FIELD_ADDT2_DESC" />
+			<field name="spacerrasdf_notice" type="spacer" label="TPL_FIELD_LOGOUTLOGINREGISTER_DESC" />
+			<field name="xml_s5_login" type="text" label="TPL_FIELD_LOGINTEXT_LABEL" description="TPL_FIELD_LOGINTEXT_DESC" />
+			<field name="xml_s5_loginout" type="text" label="TPL_FIELD_LOGOUTTEXT_LABEL" description="TPL_FIELD_LOGOUTTEXT_DESC" />
+			<field name="xml_s5_register" type="text" label="TPL_FIELD_REGISTEREXT_LABEL" description="TPL_FIELD_REGISTERTEXT_DESC" />
+			<field name="xml_s5_login_url" type="text" default="" label="TPL_FIELD_LOGINURL_LABEL" description="TPL_FIELD_LOGINURL_DESC" />
+			<field name="xml_s5_register_url" type="text" default="" label="TPL_FIELD_REGISTERURL_LABEL" description="TPL_FIELD_REGISTERURL_DESC" />
+		</fieldset>
+		<fieldset name="s55" label="TPL_FIELD_JAVA_LABEL" icon="cogs">
+			<field name="javascripts_instructions" type="spacer" label="TPL_FIELD_JAVASCRIPTS_DESC" />
+			<field name="xml_s5_multibox" type="radio" vars="yes:no|TPL_FIELD_OPTION_ENABLED:TPL_FIELD_OPTION_DISABLED" default="yes" label="TPL_FIELD_ENABLEMULTIBOX_LABEL" description="TPL_FIELD_ENABLEMULTIBOX_DESC" onload="callback" callback="function(){var v=this.value();if(v=='no'){VG.showField('vertex[s5_multioverlay]',false);VG.showField('vertex[s5_multicontrols]',false);VG.showField('vertex[s5_multimaxheight]',false);VG.showField('vertex[s5_multimaxwidth]',false);VG.showField('vertex[s5_multimovieheight]',false);VG.showField('vertex[s5_multimoviewidth]',false);VG.showField('vertex[s5_multitooltips]',false);VG.showField('vertex[s5_multirollover]',false);}else{VG.showField('vertex[s5_multioverlay]',true);VG.showField('vertex[s5_multicontrols]',true);VG.showField('vertex[s5_multimaxheight]',true);VG.showField('vertex[s5_multimaxwidth]',true);VG.showField('vertex[s5_multimovieheight]',true);VG.showField('vertex[s5_multimoviewidth]',true);VG.showField('vertex[s5_multitooltips]',true);VG.showField('vertex[s5_multirollover]',true);}}" />
+			<field name="xml_s5_multioverlay" type="radio" vars="yes:no|TPL_FIELD_OPTION_ENABLED:TPL_FIELD_OPTION_DISABLED" default="yes" label="TPL_FIELD_ENABLEMULTIBOXOVERLAY_LABEL" description="TPL_FIELD_ENABLEMULTIBOXOVERLAY_DESC" />
+			<field name="xml_s5_multicontrols" type="radio" vars="yes:no|TPL_FIELD_OPTION_ENABLED:TPL_FIELD_OPTION_DISABLED" default="yes" label="TPL_FIELD_ENABLEMULTIBOXCONTROLS_LABEL" description="TPL_FIELD_ENABLEMULTIBOXCONTROLS_DESC" />
+			<field name="xml_s5_multimaxheight" type="text" label="Multibox Max Height" default="400" description="Set the maximum height of multibox images." />
+			<field name="xml_s5_multimaxwidth" type="text" label="Multibox Max Width" default="600" description="Set the maximum width of multibox images." />
+			<field name="xml_s5_multimovieheight" type="text" label="Multibox Movie Height" default="300" description="Set the height of multibox movies." />
+			<field name="xml_s5_multimoviewidth" type="text" label="Multibox Movie Width" default="400" description="Set the width of multibox movies." />
+			<field name="xml_s5_multitooltips" type="radio" vars="true:false|TPL_FIELD_OPTION_ENABLED:TPL_FIELD_OPTION_DISABLED" default="false" label="Multibox Tooltips" description="These tooltips will show the title of the images used for multibox if enabled." />
+			<field name="xml_s5_multirollover" type="radio" vars="true:false|TPL_FIELD_OPTION_ENABLED:TPL_FIELD_OPTION_DISABLED" default="false" label="Multibox Rollover" description="Images will turn slightly opaque on hover with this feature enabled." />
+			<field name="xml_s5_info_slide" type="select" default="" label="TPL_FIELD_INFOSLIDE" description="TPL_FIELD_INFOSLIDE_DESC">
+				<option value="disabled">TPL_FIELD_INFOSLIDE_01</option>
+				<option value="css">TPL_FIELD_INFOSLIDE_02</option>
+				<option value="yes">TPL_FIELD_INFOSLIDE_03</option>
+			</field>
+			<field name="xml_s5_lazyload" type="select" default="disabled" label="TPL_FIELD_ENABLELAZYLOAD_LABEL" description="TPL_FIELD_ENABLELAZYLOAD_DESC">
+				<option value="disabled">TPL_FIELD_ENABLELAZYLOAD_01</option>
+				<option value="all">TPL_FIELD_ENABLELAZYLOAD_02</option>
+				<option value="individuals">TPL_FIELD_ENABLELAZYLOAD_03</option>
+			</field>
+			<field name="xml_s5_scroll_reveal" type="radio" vars="yes:no|TPL_FIELD_OPTION_ENABLED:TPL_FIELD_OPTION_DISABLED" default="no" label="TPL_FIELD_ENABLESREVEAL_LABEL" description="TPL_FIELD_ENABLESCREVEAL_DESC" />
+			<field name="xml_s5_tooltips" type="radio" vars="yes:no|TPL_FIELD_OPTION_ENABLED:TPL_FIELD_OPTION_DISABLED" default="no" label="TPL_FIELD_ENABLETOOLTIPS_LABEL" description="TPL_FIELD_ENABLETOOLTIPSS_DESC" />
+			<field name="xml_s5_resize_columns" type="select" default="disabled" label="TPL_FIELD_ENABLERESIZECOLUMNS_LABEL" description="TPL_FIELD_ENABLERESIZECOLUMNS_DESC" onload="callback" callback="function(){var v=this.value();if(v=='disabled'){VG.showField('vertex[s5_resize_columns_delay]',false);VG.showField('vertex[s5_resize_columns_row_distribution]',false);}else{VG.showField('vertex[s5_resize_columns_delay]',true);VG.showField('vertex[s5_resize_columns_row_distribution]',true);}}">
+				<option value="disabled">TPL_FIELD_ENABLERESIZECOLUMNS_01</option>
+				<option value="all">TPL_FIELD_ENABLERESIZECOLUMNS_02</option>
+				<option value="main">TPL_FIELD_ENABLERESIZECOLUMNS_03</option>
+			</field>
+			<field name="xml_s5_resize_columns_delay" type="text" default="500" size="6" label="TPL_FIELD_ENABLERESIZECOLUMNSDELAY_LABEL" description="TPL_FIELD_ENABLERESIZECOLUMNSDELAY_DESC" />
+			<field version="ge,2.0" name="xml_s5_resize_columns_row_distribution" type="radio" vars="yes:no|TPL_FIELD_OPTION_ENABLED:TPL_FIELD_OPTION_DISABLED" default="yes" label="TPL_FIELD_RESIZE_COLUMNS_ROW_DIST_LABEL" description="TPL_FIELD_RESIZE_COLUMNS_ROW_DIST_DESC" />
+			<field version="ge,3.0" name="xml_s5_fullscroll"  type="radio" vars="enabled:disabled|TPL_FIELD_OPTION_ENABLED:TPL_FIELD_OPTION_DISABLED" default="disabled" label="TPL_FIELD_ENABLEFULLSCROLL_LABEL" description="TPL_FIELD_ENABLEFULLSCROLL_DESC" onload="callback" callback="function(){var v=this.value();if(v=='disabled'){VG.showField('vertex[s5_fullscroll_homepage]',false);VG.showField('vertex[s5_fullscroll_names]',false);VG.showField('vertex[s5_fullscroll_hideheight]',false);VG.showField('vertex[s5_fullscroll_hidewidth]',false);}else{VG.showField('vertex[s5_fullscroll_homepage]',true);VG.showField('vertex[s5_fullscroll_names]',true);VG.showField('vertex[s5_fullscroll_hideheight]',true);VG.showField('vertex[s5_fullscroll_hidewidth]',true);}}" />
+			<field version="ge,3.0" name="xml_s5_fullscroll_homepage"  type="radio" vars="enabled:disabled|TPL_FIELD_OPTION_ENABLED:TPL_FIELD_OPTION_DISABLED" default="disabled" label="TPL_FIELD_FSHOMEPAGE_LABEL" description="TPL_FIELD_FSHOMEPAGE_DESC" />
+			<field version="ge,3.0" name="xml_s5_fullscroll_names" type="text" default="" label="TPL_FIELD_FULLPAGESCROLL_LABEL" description="TPL_FIELD_FULLPAGESCROLL_DESC" />
+			<field version="ge,3.0" name="xml_s5_fullscroll_hideheight" type="text" default="" label="TPL_FIELD_FULLPAGEHIDEHEIGHT_LABEL" description="TPL_FIELD_FULLPAGEHIDEHEIGHT_DESC" />
+			<field version="ge,3.0" name="xml_s5_fullscroll_hidewidth" type="text" default="" label="TPL_FIELD_FULLPAGEHIDEWIDTH_LABEL" description="TPL_FIELD_FULLPAGEHIDEWIDTH_DESC" />
+		</fieldset>
+		<fieldset cms="j" name="s60" label="TPL_FIELD_LANG_LABEL" icon="user">
+			<field cms="j" name="lang_instructions" type="spacer" label="TPL_FIELD_LANG_DESC" />
+			<field cms="j" name="xml_s5_login_lang" filter="raw" type="textarea" default="" label="TPL_FIELD_LOGINTEXT_LANG_LABEL" />
+			<field cms="j" name="xml_s5_loginout_lang" filter="raw" type="textarea" default="" label="TPL_FIELD_LOGINOUTTEXT_LANG_LABEL" />
+			<field cms="j" name="xml_s5_register_lang" filter="raw" type="textarea" default="" label="TPL_FIELD_REGISTERTEXT_LANG_LABEL" />
+			<field cms="j" version="ge,2.0" name="xml_s5_responsive_desktop_text_lang" filter="raw" type="textarea" default="" label="TPL_FIELD_RESPONSIVEDESKTOPTEXT_LANG_LABEL" />
+			<field cms="j" version="ge,2.0" name="xml_s5_responsive_mobile_text_lang" filter="raw" type="textarea" default="" label="TPL_FIELD_RESPONSIVEMOBILETEXT_LANG_LABEL" />
+			<field cms="j" version="le,1.0" name="xml_s5_mobile_device_menu_title_lang" filter="raw" type="textarea" default="" label="TPL_FIELD_SELECTMENU_LANG_LABEL" />
+			<field cms="j" version="le,1.0" name="xml_s5_mobile_device_pc_text_lang" filter="raw" type="textarea" default="" label="TPL_FIELD_MOBILESHOWPC_LANG_LABEL" />
+			<field cms="j" name="xml_s5_drop_down_button_open_text_lang" filter="raw" type="textarea" default="" label="TPL_FIELD_DDS_BUTTOPEN_LANG" />
+			<field cms="j" name="xml_s5_drop_down_button_close_text_lang" filter="raw" type="textarea" default="" label="TPL_FIELD_DDS_BUTTCLOSE_LANG" />
+			<field cms="j" name="xml_s5_lr_tab1_text_lang" filter="raw" type="textarea" default="" label="TPL_FIELD_FIXEDTAB1TEXT_LANG_LABEL" />
+			<field cms="j" name="xml_s5_lr_tab2_text_lang" filter="raw" type="textarea" default="" label="TPL_FIELD_FIXEDTAB2TEXT_LANG_LABEL" />
+		</fieldset>
+		<!-- WORDPRESS -->
+		<fieldset cms="w" name="legend4" icon="edit" label="TPL_FIELD_CONTENT_LABEL">
+			<field cms="w" name="xml_s5_show_component" type="select" default="yes" description="TPL_FIELD_SHOWFRONTPAGE_DESC_W" label="TPL_FIELD_SHOWFRONTPAGE_LABEL_W">
+				<option value="yes">TPL_FIELD_SHOWFRONTPAGE_01</option>
+				<option value="no">TPL_FIELD_SHOWFRONTPAGE_02</option>
+			</field>
+			<field cms="w" name="xml_s5_blog_heading" type="text" default="" label="TPL_FIELD_BLOG_HEADING_LABEL" description="TPL_FIELD_BLOG_HEADING_DESC" />
+			<field cms="w" name="xml_s5_show_date" type="select" default="1" label="TPL_FIELD_SHOW_DATE_LABEL" description="TPL_FIELD_SHOW_DATE_DESC">
+				<option value="0">TPL_FIELD_SHOW_DATE_01</option>
+				<option value="1">TPL_FIELD_SHOW_DATE_02</option>
+			</field>
+			<field cms="w" name="xml_s5_show_thumb" type="select" default="1" label="TPL_FIELD_SHOW_THUMB_LABEL" description="TPL_FIELD_SHOW_THUMB_DESC">
+				<option value="0">TPL_FIELD_SHOW_THUMB_01</option>
+				<option value="1">TPL_FIELD_SHOW_THUMB_02</option>
+			</field>
+			<field cms="w" name="xml_s5_breadcrumb_toggle" type="select" default="1" label="TPL_FIELD_BREADCRUMB_TOGGLE_LABEL">
+				<option value="1">TPL_FIELD_BREADCRUMB_TOGGLE_01</option>
+				<option value="0">TPL_FIELD_BREADCRUMB_TOGGLE_02</option>
+			</field>
+			<field cms="w" name="s5_hide_comments" type="select" default="0" label="TPL_FIELD_HIDE_COMMENTS_LABEL" description="TPL_FIELD_HIDE_COMMENTS_DESC">
+				<option value="1">TPL_FIELD_HIDE_COMMENTS_01</option>
+				<option value="0">TPL_FIELD_HIDE_COMMENTS_02</option>
+			</field>
+			<field cms="w" name="s5_wid_titles" type="select" default="1" label="TPL_FIELD_WID_TITLES_LABEL" description="TPL_FIELD_WID_TITLES_DESC">
+				<option value="1">TPL_FIELD_WID_TITLES_01</option>
+				<option value="0">TPL_FIELD_WID_TITLES_02</option>
+			</field>
+		</fieldset>
+	</admin>
+</vertex>

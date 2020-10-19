@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addrulepath="/administrator/components/com_timeworked/models/rules">
+		<field name="id"
+		       type="text"
+		       default="0"
+		       label="JGLOBAL_FIELD_ID_LABEL"
+		       readonly="true"
+				/>
+		<field name="projectid"
+		       type="project"
+		       class="inputbox"
+		       label="COM_TIMEWORKED_PROJECT"
+		       description="COM_TIMEWORKED_PROJECT_DESC"
+		       required="true"
+				/>
+		<field name="userid"
+		       type="user"
+		       class="inputbox"
+		       label="COM_TIMEWORKED_USER"
+		       description="COM_TIMEWORKED_USER_DESC"
+		       required="true"
+				/>
+		<field name="task"
+		       type="text"
+		       label="COM_TIMEWORKED_TASK"
+		       description="COM_TIMEWORKED_TASK_DESC"
+		       required="true"
+		       size="45"
+		       maxlength="45"
+				/>
+		<field name="taskid"
+		       type="task"
+		       label="COM_TIMEWORKED_NAME"
+		       default="0"
+		       required="true"
+               projectid="0"
+				/>
+		<field name="performed_work"
+		       type="textarea"
+		       label="COM_TIMEWORKED_PERFORMED"
+		       description="COM_TIMEWORKED_PERFORMED_DESC"
+		       required="true"
+		       size="45"
+		       maxlength="45"
+				/>
+		<field name="ticket_numbers"
+		       type="text"
+		       label="COM_TIMEWORKED_TASKID"
+		       description="COM_TIMEWORKED_TASKID_DESC"
+		       size="45"
+		       maxlength="45"
+		       required="true"
+				/>
+
+		<field name="from"
+		       type="calendar"
+		       label="COM_TIMEWORKED_FROM"
+		       description="COM_TIMEWORKED_FROM_DESC"
+			   required="true"
+		       size="45"
+		       maxlength="45"
+			   format="%Y-%m-%d %H:%M"
+			   showtime="true"
+			   onchange="Joomla.fromDateTimeChanged();"
+				/>
+
+		<field name="to"
+		       type="calendar"
+		       label="COM_TIMEWORKED_TO"
+		       description="COM_TIMEWORKED_TO_DESC"
+			   required="true"
+		       size="45"
+		       maxlength="45"
+			   format="%Y-%m-%d %H:%M"
+			   showtime="true"
+			   onchange="Joomla.toDateTimeChanged();"
+			   todaybutton="false"
+				/>
+
+		<field name="time"
+		       type="text"
+		       label="COM_TIMEWORKED_HOURS"
+		       description="COM_TIMEWORKED_HOURS_DESC"
+		       size="45"
+		       validate="hours"
+		       maxlength="8"
+		       readonly="true"
+				/>
+		<!-- <field name="date"
+		       type="calendar"
+		       label="JDATE"
+		       description="COM_TIMEWORKED_DATE_DESC"
+		       required="true"
+		       size="45"
+		       maxlength="45"
+			   format="%Y-%m-%d %H:%M"
+			   showtime="true"
+				/> -->
+		<field name="timeworkedid"
+		       type="timeworked"
+		       default="0"
+		       label="COM_TIMEWORKED_TIME_WORKED_TYPE"
+		       description="COM_TIMEWORKED_TIME_WORKED_TYPE_DESC"
+				/>
+	</fieldset>
+</form>

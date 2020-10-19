@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.1" method="upgrade">
+	<name>com_vertexupdate</name>
+	<creationDate>July 22, 2019</creationDate>
+	<author>Shape5 LLC</author>
+	<authorEmail>contact@shape5.com</authorEmail>
+	<authorUrl>http://www.shape5.com</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>This component is released under the GNU/GPL License</license>
+	<version>1.0.2</version>
+	<description>COM_VERTEXUPDATE_DESCRIPTION</description>
+	<administration>
+		<menu>COM_VERTEXUPDATE_MENU</menu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>vertexupdate.php</filename>
+			<filename>controller.php</filename>
+			<folder>views</folder>
+			<folder>controllers</folder>
+		</files>
+		<languages folder="admin/language">
+            <language tag="en-GB">en-GB/en-GB.com_vertexupdate.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_vertexupdate.sys.ini</language>
+        </languages>
+	</administration>
+</extension>

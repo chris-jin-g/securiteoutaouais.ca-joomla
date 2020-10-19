@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="component"
+           version="3"
+           method="install">
+	<name>com_timeworked</name>
+	<author>Giant Leap Lab</author>
+	<authorEmail>hello@giantleaplab.com</authorEmail>
+	<authorUrl>http://giantleaplab.com</authorUrl>
+	<copyright>Copyright (c) 2014-2019 Giant Leap Lab</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<version>1.3.2</version>
+	<description>COM_TIMEWORKED_XML_DESCRIPTION</description>
+	<creationDate>January 18, 2019</creationDate>
+	<scriptfile>script.php</scriptfile>
+	<files folder="site">
+		<folder>components</folder>
+		<folder>controllers</folder>
+		<folder>exceptions</folder>
+		<folder>helpers</folder>
+		<folder>lib</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<filename>index.html</filename>
+		<filename>timeworked.php</filename>
+	</files>
+	<media folder="media"
+	       destination="com_timeworked">
+		<folder>scripts</folder>
+		<folder>styles</folder>
+		<folder>images</folder>
+	</media>
+	<install>
+		<sql>
+			<file driver="mysql"
+			      charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql"
+			      charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+    <update> 
+        <schemas> 
+            <schemapath type="mysql">sql/updates</schemapath> 
+        </schemas> 
+    </update>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_timeworked.ini</language>
+	</languages>
+	<administration>
+		<menu>com_timeworked</menu>
+		<submenu>
+			<menu link="option=com_timeworked&amp;view=worklog"
+			      view="worklog"
+			      img="class:worklog"
+					>COM_TIMEWORKED_SUBMENU_WORK_LOG
+			</menu>
+			<menu link="option=com_timeworked&amp;view=users"
+			      view="users"
+			      img="class:users"
+					>COM_TIMEWORKED_SUBMENU_USERS
+			</menu>
+			<menu link="option=com_timeworked&amp;view=projects"
+			      view="projects"
+			      img="class:project"
+					>COM_TIMEWORKED_SUBMENU_PROJECTS
+			</menu>
+			<menu link="option=com_timeworked&amp;view=clients"
+			      view="clients"
+			      img="class:client"
+					>COM_TIMEWORKED_SUBMENU_CLIENTS
+			</menu>
+			<menu link="option=com_timeworked&amp;view=leaves"
+			      view="leaves"
+			      img="class:leaves"
+					>COM_TIMEWORKED_SUBMENU_LEAVES
+			</menu>
+			<menu link="option=com_timeworked&amp;view=timeworkedtypes"
+			      view="timeworkedtypes"
+			      img="class:timeworkedtypes"
+					>COM_TIMEWORKED_SUBMENU_TIME_WORKED_TYPES
+			</menu>
+			<menu link="option=com_timeworked&amp;view=leave_types"
+			      view="leave_types"
+			      img="class:leave_type"
+					>COM_TIMEWORKED_SUBMENU_LEAVE_TYPES
+			</menu>
+			<menu link="option=com_config&amp;view=component&amp;component=com_timeworked"
+			      view="leave_types"
+			      img="class:options">
+                JTOOLBAR_OPTIONS
+			</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>timeworked.php</filename>
+			<filename>controller.php</filename>
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_timeworked.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_timeworked.sys.ini</language>
+		</languages>
+	</administration>
+    <updateservers>
+		<server type="extension" priority="1" name="Time Worked on PaidDownloads"><![CDATA[http://downloads.giantleaplab.com/index.php?r=paidDownloads/gllpdUpgradeFile/joomlaExtensionXml&id=8&key=2QFSEH59TLTKR57KWKN2TJ574BNWOT4H]]></server>
+	</updateservers>
+</extension>

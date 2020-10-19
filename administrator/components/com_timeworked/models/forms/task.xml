@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="task_details">
+		<field name="id"
+		       type="hidden"
+		       default="0"
+				/>
+		<field name="task"
+		       type="text"
+		       label="COM_TIMEWORKED_NAME"
+		       description="COM_TIMEWORKED_NAME_DESC"
+		       required="true"
+		       size="45"
+		       maxlength="45"
+				/>
+		<field name="published"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="JENABLED"
+				description=""
+				default="1"
+				filter="integer"
+				>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+	</fieldset>
+	<fieldset name="task_projects">
+		<field name="project_add"
+		       type="projectsselect"
+		       label="COM_TIMEWORKED_ADD_PROJECT"
+		       description="COM_TIMEWORKED_ADD_PROJECT_DESC"
+               onchange="addProject(id);"
+				/>
+		<field name="projects_update"
+		       type="projectscheckboxset"
+		       label="COM_TIMEWORKED_UPDATE_PROJECTS"
+		       description="COM_TIMEWORKED_UPDATE_PROJECTS_DESC"
+				/>
+	</fieldset>
+</form>

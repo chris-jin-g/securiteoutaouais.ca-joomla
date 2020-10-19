@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="project_details">
+		<field name="id"
+		       type="hidden"
+		       default="0"
+				/>
+		<field name="clientid"
+		       type="client"
+		       label="COM_TIMEWORKED_CLIENT"
+		       description="COM_TIMEWORKED_CLIENT_DESC"
+		       required="true"
+				/>
+		<field name="name"
+		       type="text"
+		       label="COM_TIMEWORKED_NAME"
+		       description="COM_TIMEWORKED_NAME_DESC"
+		       required="true"
+		       size="45"
+		       maxlength="45"
+				/>
+		<field name="short_name"
+		       type="text"
+		       label="COM_TIMEWORKED_PROJECT_SHORT_NAME"
+		       description="COM_TIMEWORKED_PROJECT_SHORT_NAME_DESC"
+		       maxlength="255"
+				/>
+		<field
+				name="published"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="JENABLED"
+				description=""
+				default="1"
+				filter="integer"
+				>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+        <field name="description"
+		       type="textarea"
+		       label="JGLOBAL_DESCRIPTION"
+		       description="COM_TIMEWORKED_DESCRIPTION_DESC"
+				/>
+		<field
+				name="set_background_color"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_TIMEWORKED_SET_BACKGROUND_COLOR"
+				description="COM_TIMEWORKED_SET_BACKGROUND_COLOR_DESC"
+				default="1"
+				filter="integer"
+				>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+        <field name="color"
+		       type="color"
+		       label=""
+		       description=""
+		       size="6"
+		       maxlength="7"
+		       default="#ffffff"
+				/>
+		<field name="issue_tracker"
+		       type="url"
+		       label="COM_TIMEWORKED_BUGTRACKER_URL_PROJECT_LABEL"
+		       description="COM_TIMEWORKED_BUGTRACKER_URL_PROJECT_DESC"
+		       maxlength="255"
+		       size="45"
+				/>
+	</fieldset>
+	<fieldset name="project_users">
+		<field name="user_add"
+		       type="user"
+		       label="COM_TIMEWORKED_ADD_USER"
+		       description="COM_TIMEWORKED_ADD_USER_DESC"
+				/>
+		<field name="staff_update"
+		       type="staff"
+		       label="COM_TIMEWORKED_UPDATE_STAFF"
+		       description="COM_TIMEWORKED_UPDATE_STAFF_DESC"
+				/>
+	</fieldset>
+</form>

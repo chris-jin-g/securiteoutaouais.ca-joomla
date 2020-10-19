@@ -1,0 +1,23 @@
+/* ANY RTL SPECIFIC RESPONSIVE CALLS GO HERE
+----------------------------------------------------------- */
+
+#s5_responsive_mobile_top_bar_wrap {
+direction:rtl;
+}
+
+#s5_responsive_mobile_drop_down_menu {
+text-align:left;
+}
+
+@media screen and (max-width: 950px){
+.mailchimp_signup_form {
+text-align:right;
+}
+}
+
+@media screen and (max-width: 950px){
+#s5_responsive_menu_button {
+margin-left:0px;
+margin-right:20px;
+}
+}

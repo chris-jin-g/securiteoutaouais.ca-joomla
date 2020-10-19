@@ -1,0 +1,61 @@
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+/cgi-bin
+ehthumbs.db
+Thumbs.db
+*.swp
+error_log
+*.log
+php.ini
+php.ini.disabled
+
+# Site Verification Files #
+###########################
+google*.html
+y_key_*.html
+
+# Joomla stuff #
+################
+/configuration.php
+README.txt
+LICENSE.txt
+htaccess.txt
+/cache/*
+/administrator/cache/*
+/tmp/*
+/logs/*
+/sitemap.xml
+
+# Media Files #
+###############
+/images/*
+/files/*
+!/images/thumbs/image.php
+/components/com_rsform/uploads/*
+
+# Site Specific Stuff #
+#######################
+/custom-folder/*
